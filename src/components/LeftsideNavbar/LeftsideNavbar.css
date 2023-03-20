@@ -1,1 +1,48 @@
-/*# sourceMappingURL=LeftsideNavbar.css.map */
+.leftside-navbar {
+  height: 100%;
+  position: fixed;
+  width: 245px;
+  background: #0c0e25;
+  padding: 28px 23px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.leftside-navbar .navbar-logo {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.leftside-navbar .navbar-logo h3 {
+  font-size: 14px;
+  color: #00ffd1;
+}
+.leftside-navbar .navbar-logo h3 span {
+  color: #fff;
+}
+.leftside-navbar .navbar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.leftside-navbar .navbar-links .nav-link {
+  display: flex;
+  gap: 13px;
+  width: auto;
+  color: #fff;
+  cursor: pointer;
+}
+.leftside-navbar .navbar-links .nav-link h4 {
+  transition: 0.3s;
+}
+.leftside-navbar .navbar-links .nav-link img {
+  filter: brightness(0) invert(1);
+  transition: 0.2s;
+}
+.leftside-navbar .navbar-links .nav-link.active img {
+  filter: unset;
+}
+.leftside-navbar .navbar-links .nav-link.active h4 {
+  color: #00ffd1;
+}/*# sourceMappingURL=LeftsideNavbar.css.map */

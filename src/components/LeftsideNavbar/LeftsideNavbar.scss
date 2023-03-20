@@ -1,0 +1,51 @@
+.leftside-navbar {
+  height: 100%;
+  position: fixed;
+  width: 245px;
+  background: #0c0e25;
+  padding: 28px 23px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .navbar-logo {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    h3 {
+      font-size: 14px;
+      color: #00ffd1;
+      span {
+        color: #fff;
+      }
+    }
+  }
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    .nav-link {
+      display: flex;
+      gap: 13px;
+      width: auto;
+      color: #fff;
+      cursor: pointer;
+
+      h4 {
+        transition: 0.3s;
+      }
+      img {
+        filter: brightness(0) invert(1);
+        transition: 0.2s;
+      }
+      &.active {
+        img {
+          filter: unset;
+        }
+        h4 {
+          color: #00ffd1;
+        }
+      }
+    }
+  }
+}
