@@ -1,25 +1,24 @@
-import { MoviesAPI } from "./API/MoviesAPI";
+import { Route, Routes } from "react-router";
 import "./App.css";
-import Card from "./components/Card/Card";
 import Header from "./components/Header/Header";
 import LeftsideNavbar from "./components/LeftsideNavbar/LeftsideNavbar";
+import Genres from "./pages/Genres/Genres";
+import Home from "./pages/Home/Home";
+import News from "./pages/News/News";
+import Trailers from "./pages/Trailers/Trailers";
 
 function App() {
   return (
     <div className="App">
       <LeftsideNavbar />
       <Header />
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
-        {MoviesAPI.map((e, i) => (
-          <Card
-            key={i}
-            image={e.image}
-            imdb={e.imdb}
-            title={e.name}
-            desc={e.genres}
-          />
-        ))}
-      </div>
+
+      <Routes>
+        <Route path="Home" element={<Home />} />
+        <Route path="Genres" element={<Genres />} />
+        <Route path="News" element={<News />} />
+        <Route path="Trailers" element={<Trailers />} />
+      </Routes>
     </div>
   );
 }

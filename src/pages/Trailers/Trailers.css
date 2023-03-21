@@ -1,0 +1,30 @@
+.trailers {
+  padding: 30px 100px;
+}
+.trailers .trailer-movies {
+  display: flex;
+  gap: 20px 13px;
+  flex-wrap: wrap;
+  padding: 0px 150px;
+}
+.trailers .trailer-movies .trailer-movie {
+  width: 49%;
+  height: 210px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.trailers .trailer-movies .trailer-movie .blur {
+  background: linear-gradient(180deg, rgba(12, 14, 37, 0) 0%, #0c0e25 100%);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.trailers .trailer-movies .trailer-movie .trailer-title {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}/*# sourceMappingURL=Trailers.css.map */

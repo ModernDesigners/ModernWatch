@@ -31,6 +31,9 @@
   outline: none;
   background: #111433;
 }
+.Header .headerSearch input::-moz-placeholder {
+  color: #313561;
+}
 .Header .headerSearch input::placeholder {
   color: #313561;
 }
@@ -76,4 +79,4 @@
 }
 .Header .headerButtons .headerMicroButtons:hover {
   background: #111433;
-}
+}/*# sourceMappingURL=Header.css.map */

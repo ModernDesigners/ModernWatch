@@ -74,3 +74,20 @@
 .leftside-navbar .navbar-links .nav-link:hover::after {
   opacity: 1;
 }
+.leftside-navbar .navbar-footer {
+  display: flex;
+  gap: 25px;
+}
+.leftside-navbar .navbar-footer div {
+  width: 36px;
+  height: 36px;
+  background: #151940;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.leftside-navbar .navbar-footer div:hover {
+  background: rgba(42, 47, 94, 0.662745098);
+}/*# sourceMappingURL=LeftsideNavbar.css.map */
