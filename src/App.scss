@@ -1,16 +1,39 @@
 @font-face {
+  font-family: k2d_b;
+  src: url("./fonts/K2D-Bold.ttf");
+}
+@font-face {
   font-family: k2d_r;
-  src: url(./fonts/K2D-Regular.ttf);
+  src: url("./fonts/K2D-Regular.ttf");
+}
+@font-face {
+  font-family: main_geo;
+  src: url("./fonts/TKT-Regular-Caps.ttf");
 }
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  &::selection {
+    background: #00c19e;
+    color: white;
+  }
+}
+.App {
+  padding-left: 260px;
+  padding-right: 50px;
+  padding-top: 80px;
 }
 body {
   background-color: #050613;
 }
 h3 {
-  font-family: k2d_r;
-  letter-spacing: 0.1em;
+  font-family: k2d_b;
+  letter-spacing: 2px;
+  font-weight: initial;
+}
+h4 {
+  font-family: main_geo;
+  letter-spacing: 3px;
+  font-weight: initial;
 }

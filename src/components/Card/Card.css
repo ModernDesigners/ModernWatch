@@ -1,0 +1,70 @@
+.Card {
+  margin: 10px;
+}
+.Card .cardImageSide {
+  position: relative;
+  height: 160px;
+  width: 340px;
+  border-radius: 10px;
+  background: #0c0e25;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+}
+.Card .cardImageSide .hoverIMDb {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  height: 25px;
+  width: 100px;
+  background: rgba(0, 255, 208, 0.2);
+  border-radius: 8px;
+  color: #00ffd1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: k2d_r;
+  z-index: 2;
+  font-size: 14px;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.Card .cardImageSide img {
+  position: absolute;
+  height: 100%;
+  border-radius: 12px;
+  width: 100%;
+  object-fit: cover;
+}
+.Card .cardImageSide::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(12, 14, 37, 0.95), rgba(12, 14, 37, 0));
+  z-index: 1;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+.Card .cardImageSide:hover:before {
+  opacity: 1;
+}
+.Card .cardImageSide:hover .hoverIMDb {
+  opacity: 1;
+}
+.Card .cardTitle {
+  font-family: k2d_r;
+  color: white;
+  margin: 5px 0 3px 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.Card .cardDesc {
+  font-family: k2d_r;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 1px;
+}

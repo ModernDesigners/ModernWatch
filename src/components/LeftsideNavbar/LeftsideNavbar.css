@@ -1,9 +1,12 @@
 .leftside-navbar {
   height: 100%;
   position: fixed;
+  left: 0;
+  top: 0;
   width: 245px;
   background: #0c0e25;
   padding: 28px 23px;
+  padding-right: 0px;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -13,9 +16,10 @@
   display: flex;
   gap: 14px;
   align-items: center;
+  cursor: pointer;
 }
 .leftside-navbar .navbar-logo h3 {
-  font-size: 14px;
+  font-size: 15px;
   color: #00ffd1;
 }
 .leftside-navbar .navbar-logo h3 span {
@@ -28,9 +32,11 @@
 }
 .leftside-navbar .navbar-links .nav-link {
   display: flex;
+  align-items: center;
   gap: 13px;
   width: auto;
   color: #fff;
+  width: 222px;
   cursor: pointer;
 }
 .leftside-navbar .navbar-links .nav-link h4 {
@@ -40,9 +46,31 @@
   filter: brightness(0) invert(1);
   transition: 0.2s;
 }
+.leftside-navbar .navbar-links .nav-link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 25px;
+  width: 3px;
+  opacity: 0;
+  background: #00ffd1;
+  transition: 0.2s;
+}
 .leftside-navbar .navbar-links .nav-link.active img {
   filter: unset;
 }
 .leftside-navbar .navbar-links .nav-link.active h4 {
   color: #00ffd1;
-}/*# sourceMappingURL=LeftsideNavbar.css.map */
+}
+.leftside-navbar .navbar-links .nav-link.active::after {
+  opacity: 1;
+}
+.leftside-navbar .navbar-links .nav-link:hover img {
+  filter: brightness(1);
+}
+.leftside-navbar .navbar-links .nav-link:hover h4 {
+  color: #00ffd1;
+}
+.leftside-navbar .navbar-links .nav-link:hover::after {
+  opacity: 1;
+}

@@ -1,9 +1,12 @@
 .leftside-navbar {
   height: 100%;
   position: fixed;
+  left: 0;
+  top: 0;
   width: 245px;
   background: #0c0e25;
   padding: 28px 23px;
+  padding-right: 0px;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -12,8 +15,9 @@
     display: flex;
     gap: 14px;
     align-items: center;
+    cursor: pointer;
     h3 {
-      font-size: 14px;
+      font-size: 15px;
       color: #00ffd1;
       span {
         color: #fff;
@@ -26,9 +30,11 @@
     gap: 40px;
     .nav-link {
       display: flex;
+      align-items: center;
       gap: 13px;
       width: auto;
       color: #fff;
+      width: 222px;
       cursor: pointer;
 
       h4 {
@@ -38,12 +44,37 @@
         filter: brightness(0) invert(1);
         transition: 0.2s;
       }
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        height: 25px;
+        width: 3px;
+        opacity: 0;
+
+        background: #00ffd1;
+        transition: 0.2s;
+      }
       &.active {
         img {
           filter: unset;
         }
         h4 {
           color: #00ffd1;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+      &:hover {
+        img {
+          filter: brightness(1);
+        }
+        h4 {
+          color: #00ffd1;
+        }
+        &::after {
+          opacity: 1;
         }
       }
     }
