@@ -5,6 +5,7 @@ import LeftsideNavbar from "./components/LeftsideNavbar/LeftsideNavbar";
 import Genres from "./pages/Genres/Genres";
 import Home from "./pages/Home/Home";
 import News from "./pages/News/News";
+import Search from "./pages/Search/Search";
 import Trailers from "./pages/Trailers/Trailers";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="Genres" element={<Genres />} />
         <Route path="News" element={<News />} />
         <Route path="Trailers" element={<Trailers />} />
+        <Route path="Search" element={<Search />} />
       </Routes>
     </div>
   );

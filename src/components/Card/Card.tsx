@@ -4,9 +4,9 @@ interface CardInterface {
   image: string;
   imdb: number;
   title: string;
-  desc: string;
+  genres: string;
 }
-export default function Card({ image, imdb, title, desc }: CardInterface) {
+export default function Card({ image, imdb, title, genres }: CardInterface) {
   return (
     <div className="Card">
       <div className="cardImageSide">
@@ -14,7 +14,7 @@ export default function Card({ image, imdb, title, desc }: CardInterface) {
         <div className="hoverIMDb">IMDb: {imdb}</div>
       </div>
       <div className="cardTitle">{title}</div>
-      <div className="cardDesc">{desc}</div>
+      <div className="cardDesc">{genres}</div>
     </div>
   );
 }

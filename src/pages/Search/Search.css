@@ -1,0 +1,97 @@
+.search .search-header {
+  display: flex;
+  gap: 30px;
+  padding: 50px 0px;
+}
+.search .search-header .search-input {
+  height: 45px;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.search .search-header .search-input img {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+.search .search-header .search-input input {
+  background: #0c0e25;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  outline: none;
+  padding: 0px 60px 0px 20px;
+  color: #fff;
+  font-size: 16px;
+  font-family: main_geo;
+}
+.search .search-header button {
+  font-family: main_geo;
+  width: 244px;
+  height: 45px;
+  background: #00ffd1;
+  border-radius: 5px;
+  color: rgb(5, 6, 19);
+  letter-spacing: 0.1em;
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.search .search-filter {
+  display: flex;
+  gap: 23px;
+}
+.search .search-filter .filter {
+  position: relative;
+}
+.search .search-filter .filter:hover .filter-options {
+  height: 450px;
+}
+.search .search-filter .filter .filter-flex {
+  width: 170px;
+  height: 40px;
+  background: #151940;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0px 20px;
+}
+.search .search-filter .filter .filter-flex h4 {
+  margin: auto;
+}
+.search .search-filter .filter .filter-flex svg {
+  color: #fff;
+}
+.search .search-filter .filter .filter-options {
+  overflow: hidden;
+  height: 0px;
+  position: absolute;
+  left: 0px;
+  top: 60px;
+  transition: 0.8s;
+  z-index: 22;
+}
+.search .search-filter .filter .filter-options .filter-option {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.search .search-filter .filter .filter-options .filter-option h4 {
+  width: 170px;
+  cursor: pointer;
+  text-align: center;
+}
+.search .search-cards {
+  padding: 50px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=Search.css.map */

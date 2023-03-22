@@ -10,7 +10,7 @@ export default function Home() {
           image={e.image}
           imdb={e.imdb}
           title={e.name}
-          desc={e.genres}
+          genres={e.genres}
         />
       ))}
     </div>
