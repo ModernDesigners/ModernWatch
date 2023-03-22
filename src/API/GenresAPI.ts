@@ -1,13 +1,13 @@
-import fantastic from "../images/genres/fantastic.png";
-import children from "../images/genres/children.png";
-import adventure from "../images/genres/adventure.png";
-import comedy from "../images/genres/comedy.png";
-import triler from "../images/genres/triler.png";
-import romantic from "../images/genres/romantic.png";
-import anime from "../images/genres/anime.png";
-import scary from "../images/genres/scary.png";
-import family from "../images/genres/family.png";
-import war from "../images/genres/war.png";
+import fantastic from "../images/genres/fantastic.webp";
+import children from "../images/genres/children.webp";
+import adventure from "../images/genres/adventure.webp";
+import comedy from "../images/genres/comedy.webp";
+import triler from "../images/genres/triler.webp";
+import romantic from "../images/genres/romantic.webp";
+import anime from "../images/genres/anime.webp";
+import scary from "../images/genres/scary.webp";
+import family from "../images/genres/family.webp";
+import war from "../images/genres/war.webp";
 export const GenresAPI = [
   {
     img: fantastic,

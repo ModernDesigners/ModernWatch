@@ -76,7 +76,7 @@
 }
 .leftside-navbar .navbar-footer {
   display: flex;
-  gap: 25px;
+  gap: 15px;
 }
 .leftside-navbar .navbar-footer div {
   width: 36px;
@@ -90,4 +90,4 @@
 }
 .leftside-navbar .navbar-footer div:hover {
   background: rgba(42, 47, 94, 0.662745098);
-}/*# sourceMappingURL=LeftsideNavbar.css.map */
+}

@@ -1,5 +1,5 @@
 .genres {
-  padding: 30px 100px;
+  padding: 30px 0px;
 }
 .genres .genres-card-main {
   display: flex;
@@ -17,7 +17,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
   cursor: pointer;
+}
+.genres .genres-card-main .genre-card:hover .blur-filter {
+  background: rgba(12, 14, 37, 0.2);
 }
 .genres .genres-card-main .genre-card h4 {
   position: absolute;
@@ -35,9 +40,6 @@
   top: 0px;
   left: 0px;
 }
-.genres .genres-card-main .genre-card .blur-filter:hover {
-  background-color: transparent;
-}
 
 @media screen and (max-width: 1500px) {
   .genres {
@@ -51,4 +53,4 @@
   .genres .genre-card {
     width: 100%;
   }
-}/*# sourceMappingURL=Genres.css.map */
+}

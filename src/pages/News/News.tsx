@@ -13,8 +13,8 @@ export default function () {
         </div>
       </div>
       <div className="news-movie-main">
-        {NewsAPI.map((e) => (
-          <NewsMovie image={e.image} />
+        {NewsAPI.map((e, i) => (
+          <NewsMovie key={i} image={e.image} />
         ))}
       </div>
     </div>

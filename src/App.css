@@ -15,18 +15,23 @@
   margin: 0px;
   box-sizing: border-box;
 }
-*::-moz-selection {
-  background: #00c19e;
-  color: white;
-}
 *::selection {
   background: #00c19e;
   color: white;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+  background: #0c0e25;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #151940;
+}
+
 .App {
-  padding-left: 260px;
-  padding-right: 50px;
+  padding-left: 270px;
+  padding-right: 20px;
   padding-top: 80px;
 }
 
@@ -37,6 +42,7 @@ body {
 p {
   font-family: k2d_r;
   font-size: 15px;
+  font-weight: initial;
   line-height: 21px;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.5);
@@ -46,6 +52,7 @@ h2 {
   font-family: k2d_r;
   font-size: 24px;
   line-height: 31px;
+  font-weight: initial;
   letter-spacing: 0.1em;
   color: #ffffff;
 }
@@ -68,10 +75,14 @@ h5 {
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.1em;
+  font-weight: initial;
   color: #ffffff;
 }
 
 .header-text {
-  margin-bottom: 50px;
-  font-size: 20px;
-}/*# sourceMappingURL=App.css.map */
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-family: main_geo;
+  font-size: 22px;
+  letter-spacing: 2px;
+}

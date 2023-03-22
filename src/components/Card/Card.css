@@ -1,6 +1,3 @@
-.Card {
-  margin: 10px;
-}
 .Card .cardImageSide {
   position: relative;
   height: 160px;
@@ -8,9 +5,7 @@
   border-radius: 10px;
   background: #0c0e25;
   overflow: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   cursor: pointer;
 }
 .Card .cardImageSide .hoverIMDb {
@@ -37,8 +32,7 @@
   height: 100%;
   border-radius: 12px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .Card .cardImageSide::before {
   content: "";
@@ -70,4 +64,4 @@
   margin: 0;
   font-size: 11px;
   letter-spacing: 1px;
-}/*# sourceMappingURL=Card.css.map */
+}

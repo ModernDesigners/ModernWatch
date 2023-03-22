@@ -7,7 +7,7 @@ export const NavlinksAPI = [
   {
     icon: homeIcon,
     title: "მთავარი",
-    navigateTo: "Home",
+    navigateTo: "/",
   },
   {
     icon: genreIcon,
