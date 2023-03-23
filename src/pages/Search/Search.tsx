@@ -4,14 +4,41 @@ import { FilterAPI } from "../../API/FIlterAPI";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { MoviesAPI } from "../../API/MoviesAPI";
 import Card from "../../components/Card/Card";
-import { useRef, useState } from "react";
-
+import { useEffect, useRef, useState } from "react";
+import { useLocation, useParams } from "react-router";
 export default function Search() {
+  const seeGets = useLocation();
+  const searchParams = new URLSearchParams(seeGets.search);
+  const getSearchT: any =
+    searchParams.get("search") !== null
+      ? searchParams.get("search")
+      : undefined;
+  const [searchInput, setSearchInput] = useState(getSearchT);
+  const [searchedRow, setsearchedRow] = useState(0);
+  useEffect(() => {
+    setSearchInput(getSearchT);
+  }, [seeGets.search]);
+
+  // SEARCH SYSTEM
+  let searchedAPI = MoviesAPI;
+
+  searchedAPI = MoviesAPI;
+  if (getSearchT !== undefined) {
+    searchedAPI = searchedAPI.filter((items) =>
+      items.name.toLowerCase().includes(searchInput.toLowerCase())
+    );
+  }
+
   return (
     <div className="search">
       <div className="search-header">
         <div className="search-input">
-          <input type="text" placeholder="მოძებნა..." />
+          <input
+            type="text"
+            placeholder="მოძებნა..."
+            onChange={(e) => setSearchInput(e.target.value)}
+            value={searchInput}
+          />
           <img src={searchIcon} alt="" />
         </div>
         <button>ფილტრები</button>
@@ -34,7 +61,7 @@ export default function Search() {
         ))}
       </div>
       <div className="search-cards">
-        {MoviesAPI.map((e, i) => (
+        {searchedAPI.map((e: any, i: number) => (
           <Card
             key={i}
             genres={e.genres}

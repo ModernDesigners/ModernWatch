@@ -5,6 +5,7 @@ import scrollArrow from "../../images/icons/arrow.png";
 import avengers from "../../images/posters/avengers.jpg";
 import wednesday from "../../images/posters/wednesday.webp";
 import moonknight from "../../images/posters/moonknight.webp";
+
 export default function Home() {
   return (
     <div className="Home">
