@@ -3,6 +3,7 @@ import searchIcon from "../../images/icons/searchIcon.png";
 import Settings from "../../images/icons/iconsax/Linear/Settings.png";
 import Notifications from "../../images/icons/iconsax/Linear/Notifications.png";
 import User from "../../images/icons/iconsax/Linear/User.png";
+import { MoviesAPI } from "../../API/MoviesAPI";
 import { useNavigate } from "react-router";
 import { useRef } from "react";
 import { useEffect, useState } from "react";
@@ -24,19 +25,54 @@ export default function Header() {
   const navigate = useNavigate();
   const searchSubmit = (e: any) => {
     e.preventDefault();
-    navigate({
-      pathname: "/Search",
-      search: "?search=" + inputRef.current.value,
-    });
+    // navigate({
+    //   pathname: "/Search",
+    //   search: "?search=" + inputRef.current.value,
+    // });
     inputRef.current.value = "";
   };
   return (
     <div className="Header">
-      <div className={`headerSearch ${searchINP ? "" : "hideHS"}`}>
-        <form onSubmit={(e) => searchSubmit(e)}>
-          <input ref={inputRef} type="text" placeholder="მოძებნა..." />
-          <img src={searchIcon} onClick={(e) => searchSubmit(e)} />
-        </form>
+      <div className="search-main">
+        <div className={`headerSearch ${searchINP ? "" : "hideHS"}`}>
+          <form onSubmit={(e) => searchSubmit(e)}>
+            <input ref={inputRef} type="text" placeholder="მოძებნა..." />
+            <img src={searchIcon} onClick={(e) => searchSubmit(e)} />
+          </form>
+        </div>
+        <div className="search-results">
+          <div className="result-movies">
+            {MoviesAPI.map((e) => (
+              <div className="result-movie">
+                <img src={e.image} alt="" />
+                <div className="result-movie-info">
+                  <div className="header-info">
+                    <h2>{e.name}</h2>
+                    <p>{e.genres}</p>
+                  </div>
+                  <div className="bottom-info">
+                    <div className="flex-info">
+                      <h4>სტუდიო:</h4>
+                      <p>{e.studio}</p>
+                    </div>
+                    <div className="flex-info">
+                      <h4>წელი:</h4>
+                      <p>{e.year}</p>
+                    </div>
+                    <div className="flex-info">
+                      <h4>ხანგრძლივობა:</h4>
+                      <p>{e.time} წუთი</p>
+                    </div>
+                    <div className="flex-info">
+                      <h4>ქვეყანა:</h4>
+                      <p>{e.country}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
       <div className="headerButtons">
         <div className="headerP">პრობლემის შეტყობინება</div>

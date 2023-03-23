@@ -1,90 +1,149 @@
 .Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 35px;
+  position: fixed;
+  width: calc(100% - 295px);
+  left: 270px;
+  top: 30px;
+  z-index: 9;
+  .search-main {
+    position: relative;
+    .search-results {
+      position: absolute;
+      height: 638px;
+      background: #0c0e25;
+      top: 67px;
+      left: 0px;
+      width: 100%;
+      border-radius: 5px;
+      overflow: hidden;
+      .result-movies {
+        padding: 18px 15px;
+        height: 100%;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        overflow-y: scroll;
+
+        .result-movie {
+          margin-bottom: 20px;
+          display: flex;
+          gap: 20px;
+          img {
+            height: 170px;
+            width: 121px;
+            object-fit: cover;
+            border-radius: 5px;
+          }
+          .result-movie-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .header-info {
+              h2 {
+                font-size: 13px;
+              }
+              p {
+                font-size: 12px;
+              }
+            }
+            .bottom-info {
+              .flex-info {
+                display: flex;
+                margin-bottom: 5px;
+                h4 {
+                  font-size: 12px;
+                  margin-right: 10px;
+                }
+                p {
+                  font-size: 11px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .headerSearch {
+      display: flex;
+      align-items: center;
+      position: relative;
+      form {
+        display: flex;
+        align-items: center;
+      }
+      input {
+        font-family: main_geo;
+        font-size: 16px;
+        height: 40px;
+        border-radius: 5px;
+        width: 500px;
+        background: #0c0e25;
+        padding: 0 20px;
+        border: 0;
+        letter-spacing: 1px;
+        color: white;
+        padding-right: 40px;
+        transition: 0.2s;
+        &:focus {
+          outline: none;
+          background: #111433;
+        }
+        &::placeholder {
+          color: #313561;
+        }
+      }
+      img {
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        height: 18px;
+      }
+    }
+  }
+  .hideHS {
+    form {
+      display: none;
+    }
+  }
+
+  .headerButtons {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 35px;
-    position: fixed;
-    width: calc(100% - 295px);
-    left: 270px;
-    top: 30px;
-    z-index: 9;
-    .headerSearch {
-        display: flex;
-        align-items: center;
-        position: relative;
-        form {
-            display: flex;
-            align-items: center;
-        }
-        input {
-            font-family: main_geo;
-            font-size: 16px;
-            height: 40px;
-            border-radius: 5px;
-            width: 350px;
-            background: #0c0e25;
-            padding: 0 20px;
-            border: 0;
-            letter-spacing: 1px;
-            color: white;
-            padding-right: 40px;
-            transition: 0.2s;
-            &:focus {
-                outline: none;
-                background: #111433;
-            }
-            &::placeholder {
-                color: #313561;
-            }
-        }
-        img {
-            cursor: pointer;
-            position: absolute;
-            right: 15px;
-            height: 18px;
-        }
+    gap: 20px;
+    .headerP {
+      background: rgba(255, 0, 0, 0.1);
+      color: #ff0000;
+      letter-spacing: 2px;
+      font-family: main_geo;
+      font-size: 16px;
+      padding: 8px 25px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s;
+      &:hover {
+        background: rgba(255, 0, 0, 0.2);
+      }
     }
-    .hideHS {
-        form {
-            display: none;
-        }
+    .headerMicroButtons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      aspect-ratio: 1;
+      border-radius: 5px;
+      background: #0c0e25;
+      cursor: pointer;
+      transition: 0.2s;
+      img {
+        height: 22px;
+      }
+      &:hover {
+        background: #111433;
+      }
     }
-
-    .headerButtons {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        .headerP {
-            background: rgba(255, 0, 0, 0.1);
-            color: #ff0000;
-            letter-spacing: 2px;
-            font-family: main_geo;
-            font-size: 16px;
-            padding: 8px 25px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: 0.2s;
-            &:hover {
-                background: rgba(255, 0, 0, 0.2);
-            }
-        }
-        .headerMicroButtons {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 40px;
-            aspect-ratio: 1;
-            border-radius: 5px;
-            background: #0c0e25;
-            cursor: pointer;
-            transition: 0.2s;
-            img {
-                height: 22px;
-            }
-            &:hover {
-                background: #111433;
-            }
-        }
-    }
+  }
 }
