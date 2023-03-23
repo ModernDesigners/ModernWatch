@@ -86,3 +86,23 @@ h5 {
   font-size: 22px;
   letter-spacing: 2px;
 }
+
+@keyframes Loader {
+  0% {
+    filter: brightness(0.9);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+  100% {
+    filter: brightness(0.9);
+  }
+}
+@keyframes LoaderImg {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}

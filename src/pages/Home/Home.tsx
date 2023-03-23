@@ -5,15 +5,24 @@ import scrollArrow from "../../images/icons/arrow.png";
 import avengers from "../../images/posters/avengers.jpg";
 import wednesday from "../../images/posters/wednesday.webp";
 import moonknight from "../../images/posters/moonknight.webp";
+import logo from "../../images/LogoH.webp";
 
 export default function Home() {
+  function hideLoader(img: any) {
+    const cardId = img.parentNode;
+    const loader = cardId.children[0];
+    loader.style.display = "none";
+  }
   return (
     <div className="Home">
       <div className="header-text homeT">პოპულარული</div>
       <div className="MainSplitter">
         <div className="HomeStarterSections MainSec">
+          <div className="cardLoader">
+            <img src={logo} />
+          </div>
           <div className="blur"></div>
-          <img src={avengers} />
+          <img src={avengers} onLoad={(e) => hideLoader(e.target)} />
           <div className="MainBar">
             <div className="bSide">
               <button className="mainB watchB">უყურე</button>
@@ -27,13 +36,19 @@ export default function Home() {
         </div>
         <div className="HomeStarterSections MiniSec">
           <div className="MiniCard">
+            <div className="cardLoader">
+              <img className="loaderImg" src={logo} />
+            </div>
             <div className="blur"></div>
-            <img src={wednesday} />
+            <img src={wednesday} onLoad={(e) => hideLoader(e.target)} />
             <div className="MiniCardTitle">Wednesday</div>
           </div>
           <div className="MiniCard">
+            <div className="cardLoader">
+              <img className="loaderImg" src={logo} />
+            </div>
             <div className="blur"></div>
-            <img src={moonknight} />
+            <img src={moonknight} onLoad={(e) => hideLoader(e.target)} />
             <div className="MiniCardTitle">Moon Knight</div>
           </div>
         </div>

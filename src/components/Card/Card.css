@@ -8,6 +8,23 @@
   user-select: none;
   cursor: pointer;
 }
+.Card .cardImageSide .cardLoader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #0c0e25;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  animation: Loader 1.5s infinite ease-in-out;
+  justify-content: center;
+}
+.Card .cardImageSide .cardLoader img {
+  height: 70px;
+  width: 70px;
+  animation: LoaderImg 1.5s infinite linear;
+  opacity: 0.4;
+}
 .Card .cardImageSide .hoverIMDb {
   position: absolute;
   right: 10px;

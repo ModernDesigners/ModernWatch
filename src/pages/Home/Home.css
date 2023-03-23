@@ -84,6 +84,23 @@
   border-radius: 15px;
   overflow: hidden;
 }
+.MainSplitter .MainSec .cardLoader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #0c0e25;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: Loader 1.5s infinite ease-in-out;
+}
+.MainSplitter .MainSec .cardLoader img {
+  height: 80px;
+  width: 80px;
+  animation: LoaderImg 1.5s infinite linear;
+  opacity: 0.4;
+}
 .MainSplitter .MainSec:hover .blur {
   opacity: 0.9;
 }
@@ -113,6 +130,23 @@
   justify-content: space-between;
   flex-direction: column;
   gap: 10px;
+}
+.MainSplitter .MiniSec .cardLoader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #0c0e25;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  animation: Loader 1.5s infinite ease-in-out;
+  justify-content: center;
+}
+.MainSplitter .MiniSec .cardLoader .loaderImg {
+  height: 70px;
+  width: 70px;
+  opacity: 0.4;
+  animation: LoaderImg 1.5s infinite linear;
 }
 .MainSplitter .MiniSec .MiniCard {
   position: relative;

@@ -14,13 +14,13 @@
       position: absolute;
       height: 638px;
       background: #0c0e25;
-      top: 67px;
+      top: 60px;
       left: 0px;
       width: 100%;
       border-radius: 5px;
       overflow: hidden;
+      transition: 0.2s;
       .result-movies {
-        padding: 18px 15px;
         height: 100%;
         &::-webkit-scrollbar {
           display: none;
@@ -28,9 +28,15 @@
         overflow-y: scroll;
 
         .result-movie {
-          margin-bottom: 20px;
+          cursor: pointer;
           display: flex;
-          gap: 20px;
+          gap: 15px;
+          padding: 15px 10px;
+          transition: 0.2s;
+          &:hover {
+            background: #151940;
+            border-radius: 6px;
+          }
           img {
             height: 170px;
             width: 121px;
@@ -43,28 +49,35 @@
             justify-content: space-between;
             .header-info {
               h2 {
-                font-size: 13px;
+                font-size: 14px;
+                text-transform: uppercase;
+                line-height: 15px;
               }
               p {
-                font-size: 12px;
+                font-size: 11px;
               }
             }
             .bottom-info {
               .flex-info {
                 display: flex;
+                align-items: center;
                 margin-bottom: 5px;
                 h4 {
-                  font-size: 12px;
-                  margin-right: 10px;
+                  font-size: 13px;
+                  margin-right: 5px;
                 }
                 p {
-                  font-size: 11px;
+                  font-family: main_geo;
+                  font-size: 13px;
                 }
               }
             }
           }
         }
       }
+    }
+    .searchCloser {
+      height: 0px;
     }
     .headerSearch {
       display: flex;

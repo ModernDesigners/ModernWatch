@@ -16,14 +16,14 @@
   position: absolute;
   height: 638px;
   background: #0c0e25;
-  top: 67px;
+  top: 60px;
   left: 0px;
   width: 100%;
   border-radius: 5px;
   overflow: hidden;
+  transition: 0.2s;
 }
 .Header .search-main .search-results .result-movies {
-  padding: 18px 15px;
   height: 100%;
   overflow-y: scroll;
 }
@@ -31,15 +31,20 @@
   display: none;
 }
 .Header .search-main .search-results .result-movies .result-movie {
-  margin-bottom: 20px;
+  cursor: pointer;
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  padding: 15px 10px;
+  transition: 0.2s;
+}
+.Header .search-main .search-results .result-movies .result-movie:hover {
+  background: #151940;
+  border-radius: 6px;
 }
 .Header .search-main .search-results .result-movies .result-movie img {
   height: 170px;
   width: 121px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
 }
 .Header .search-main .search-results .result-movies .result-movie .result-movie-info {
@@ -48,21 +53,28 @@
   justify-content: space-between;
 }
 .Header .search-main .search-results .result-movies .result-movie .result-movie-info .header-info h2 {
-  font-size: 13px;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 15px;
 }
 .Header .search-main .search-results .result-movies .result-movie .result-movie-info .header-info p {
-  font-size: 12px;
+  font-size: 11px;
 }
 .Header .search-main .search-results .result-movies .result-movie .result-movie-info .bottom-info .flex-info {
   display: flex;
+  align-items: center;
   margin-bottom: 5px;
 }
 .Header .search-main .search-results .result-movies .result-movie .result-movie-info .bottom-info .flex-info h4 {
-  font-size: 12px;
-  margin-right: 10px;
+  font-size: 13px;
+  margin-right: 5px;
 }
 .Header .search-main .search-results .result-movies .result-movie .result-movie-info .bottom-info .flex-info p {
-  font-size: 11px;
+  font-family: main_geo;
+  font-size: 13px;
+}
+.Header .search-main .searchCloser {
+  height: 0px;
 }
 .Header .search-main .headerSearch {
   display: flex;
@@ -90,9 +102,6 @@
 .Header .search-main .headerSearch input:focus {
   outline: none;
   background: #111433;
-}
-.Header .search-main .headerSearch input::-moz-placeholder {
-  color: #313561;
 }
 .Header .search-main .headerSearch input::placeholder {
   color: #313561;
@@ -142,4 +151,4 @@
 }
 .Header .headerButtons .headerMicroButtons:hover {
   background: #111433;
-}/*# sourceMappingURL=Header.css.map */
+}
