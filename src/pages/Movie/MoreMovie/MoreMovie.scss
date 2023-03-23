@@ -1,0 +1,27 @@
+.more-movie-main {
+  padding: 50px 0px;
+  h4 {
+    font-size: 20px;
+  }
+  .more-movies {
+    display: flex;
+    margin-top: 30px;
+    .more-movie {
+      width: 23%;
+      margin-right: 20px;
+      img {
+        width: 100%;
+        border-radius: 15px;
+        height: 205px;
+        object-fit: cover;
+      }
+      .movie-title {
+        color: #fff;
+        margin-bottom: 5px;
+      }
+      .movie-genre {
+        font-size: 14px;
+      }
+    }
+  }
+}
