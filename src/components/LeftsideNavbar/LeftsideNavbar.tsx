@@ -13,7 +13,7 @@ export default function LeftsideNavbar() {
   const [active, setActive] = useState(0);
   return (
     <div className="leftside-navbar">
-      <div className="navbar-logo" onClick={() => navigate("Home")}>
+      <div className="navbar-logo" onClick={() => navigate("/")}>
         <img src={Logo} alt="" />
         <h3>
           MODERN <span>WATCH</span>

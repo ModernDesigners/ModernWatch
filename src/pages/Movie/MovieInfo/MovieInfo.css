@@ -17,6 +17,9 @@
   object-position: center;
   border-radius: 10px;
 }
+.movie-info .movie-full-info {
+  position: relative;
+}
 .movie-info .movie-full-info .flex-info {
   display: flex;
   margin-bottom: 6px;
@@ -60,6 +63,10 @@
 }
 .movie-info .movie-full-info .movie-buttons button:nth-child(2):hover {
   background: rgba(255, 77, 0, 0.3);
+}
+.movie-info .movie-full-info .rating {
+  position: absolute;
+  bottom: 0;
 }
 .movie-info .movie-full-info .rating .thumbs {
   margin-top: 12px;

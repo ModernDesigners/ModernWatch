@@ -6,10 +6,31 @@
   border-radius: 5px;
   height: 489px;
   width: 100%;
-  background-image: url("../../images/news/main-movie.png");
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+}
+.news .main-movie img {
+  width: 100%;
+  position: absolute;
+}
+.news .main-movie .cardLoader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #0c0e25;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  animation: Loader 1.5s infinite ease-in-out;
+  justify-content: center;
+}
+.news .main-movie .cardLoader img {
+  height: 70px;
+  width: 70px;
+  animation: LoaderImg 1.5s infinite linear;
+  opacity: 0.4;
 }
 .news .main-movie:hover .blur {
   opacity: 0.8;
@@ -50,6 +71,29 @@
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
+}
+.news .news-movie-main .news-movie .cardLoader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #0c0e25;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  animation: Loader 1.5s infinite ease-in-out;
+  justify-content: center;
+}
+.news .news-movie-main .news-movie .cardLoader img {
+  height: 70px;
+  width: 70px;
+  animation: LoaderImg 1.5s infinite linear;
+  opacity: 0.4;
+}
+.news .news-movie-main .news-movie img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }
 .news .news-movie-main .news-movie h4 {
   position: absolute;
