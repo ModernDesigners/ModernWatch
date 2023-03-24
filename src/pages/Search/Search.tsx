@@ -63,6 +63,7 @@ export default function Search() {
       <div className="search-cards">
         {searchedAPI.map((e: any, i: number) => (
           <Card
+            id={e.id}
             key={i}
             genres={e.genres}
             title={e.name}

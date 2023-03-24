@@ -22,6 +22,7 @@ export default function ComingSoon() {
           {MoviesAPI.map((e, i) =>
             i < 5 ? (
               <Card
+                id={e.id}
                 key={i}
                 image={e.image}
                 imdb={e.imdb}
@@ -48,6 +49,7 @@ export default function ComingSoon() {
           {MoviesAPI.map((e, i) =>
             i < 5 ? (
               <Card
+                id={e.id}
                 key={i}
                 image={e.image}
                 imdb={e.imdb}
@@ -74,6 +76,7 @@ export default function ComingSoon() {
           {MoviesAPI.map((e, i) =>
             i < 5 ? (
               <Card
+                id={e.id}
                 key={i}
                 image={e.image}
                 imdb={e.imdb}
@@ -100,6 +103,7 @@ export default function ComingSoon() {
           {MoviesAPI.map((e, i) =>
             i < 5 ? (
               <Card
+                id={e.id}
                 key={i}
                 image={e.image}
                 imdb={e.imdb}

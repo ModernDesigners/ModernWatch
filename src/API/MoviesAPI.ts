@@ -1,18 +1,33 @@
+// BANNERS
 import spiderman from "../images/posters/spiderman.webp";
-import Avengers from "../images/posters/Avengers.jpg";
-import iceage from "../images/posters/iceage.jpg";
-import luca from "../images/posters/luca.png";
-import loki from "../images/posters/loki.jpg";
-import madagascar from "../images/posters/madagascar.jpg";
-import spacejam from "../images/posters/spaceJam.png";
+import Avengers from "../images/posters/Avengers.webp";
+import iceage from "../images/posters/iceage.webp";
+import luca from "../images/posters/luca.webp";
+import loki from "../images/posters/loki.webp";
+import madagascar from "../images/posters/madagascar.webp";
+import spacejam from "../images/posters/spaceJam.webp";
 import wednesday from "../images/posters/wednesday.webp";
-import croods from "../images/posters/croods.jpg";
+import croods from "../images/posters/croods.webp";
 import teenwolf from "../images/posters/teen-wolf-movie-poster.webp";
+
+// POSTERS
+import spidermanP from "../images/banners/Spiderman.webp";
+import AvengersP from "../images/banners/Avengers.webp";
+import iceageP from "../images/banners/Iceage.webp";
+import lucaP from "../images/banners/Luca.webp";
+import lokiP from "../images/banners/Loki.webp";
+import madagascarP from "../images/banners/Madagascar.webp";
+import spacejamP from "../images/banners/SpaceJam.webp";
+import wednesdayP from "../images/banners/Wednesday.webp";
+import croodsP from "../images/banners/Croods.webp";
+import teenwolfP from "../images/banners/Teenwolf.webp";
 
 export const MoviesAPI = [
   {
+    id: 1,
     name: "Spider-man: No Way Home",
     image: spiderman,
+    imagePoster: spidermanP,
     genres: "COMEDY, ADVENTURE, TRILLER",
     banner: "",
     studio: "MARVEL",
@@ -24,8 +39,10 @@ export const MoviesAPI = [
     imdb: 8.2,
   },
   {
+    id: 2,
     name: "AVENGERS: ENDGAME",
     image: Avengers,
+    imagePoster: AvengersP,
     genres: "ADVENTURE, ACTION, FANTASY",
     banner: "",
     studio: "MARVEL",
@@ -36,8 +53,10 @@ export const MoviesAPI = [
     imdb: 8.6,
   },
   {
+    id: 3,
     name: "Ice Age: Collision Course",
     image: iceage,
+    imagePoster: iceageP,
     genres: "FAMILY, ADVENTURE",
     banner: "",
     studio: "20th Century Studios",
@@ -49,8 +68,10 @@ export const MoviesAPI = [
     imdb: 5.6,
   },
   {
+    id: 4,
     name: "Luca",
     image: luca,
+    imagePoster: lucaP,
     genres: "COMEDY, ADVENTURE",
     banner: "",
     studio: "Walt Disney Studios",
@@ -62,8 +83,10 @@ export const MoviesAPI = [
     imdb: 7.4,
   },
   {
+    id: 5,
     name: "Loki",
     image: loki,
+    imagePoster: lokiP,
     genres: "ACTION, ADVENTURE, FANTASY",
     banner: "",
     studio: "MARVEL",
@@ -74,8 +97,10 @@ export const MoviesAPI = [
     imdb: 8.2,
   },
   {
+    id: 6,
     name: "Madagascare",
     image: madagascar,
+    imagePoster: madagascarP,
     genres: "FAMILY, COMEDY",
     banner: "",
     studio: "DreamWorks Pictures",
@@ -87,8 +112,10 @@ export const MoviesAPI = [
     imdb: 6.9,
   },
   {
+    id: 7,
     name: "Space Jam: A New Legacy",
     image: spacejam,
+    imagePoster: spacejamP,
     genres: "FAMILY, COMEDY",
     banner: "",
     studio: "Warner Bros. Pictures",
@@ -100,8 +127,10 @@ export const MoviesAPI = [
     imdb: 4.5,
   },
   {
+    id: 8,
     name: "Wednesday",
     image: wednesday,
+    imagePoster: wednesdayP,
     genres: "COMEDY, HORROR",
     banner: "",
     studio: "NETFLIX",
@@ -113,8 +142,10 @@ export const MoviesAPI = [
     imdb: 8.1,
   },
   {
+    id: 9,
     name: "The Croods: A New Age",
     image: croods,
+    imagePoster: croodsP,
     genres: "FAMILY, COMEDY",
     banner: "",
     studio: "Universal Pictures",
@@ -126,8 +157,10 @@ export const MoviesAPI = [
     imdb: 6.9,
   },
   {
+    id: 10,
     name: "Teen Wolf: The Movie",
     image: teenwolf,
+    imagePoster: teenwolfP,
     genres: "ACTION, DRAMA, FANTASY",
     banner: "",
     studio: "Paramount+",

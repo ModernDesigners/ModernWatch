@@ -1,7 +1,8 @@
 import "./MoreMovie.css";
 import { MoviesAPI } from "../../../API/MoviesAPI";
-import c from "../../../images/posters/croods.jpg";
-import { useEffect, useState } from "react";
+import scrollArrow from "../../../images/icons/arrow.png";
+import { useEffect } from "react";
+import Card from "../../../components/Card/Card";
 export default function MoreMovie() {
   useEffect(() => {}, []);
   let randomMovieList: any = [];
@@ -14,18 +15,31 @@ export default function MoreMovie() {
   }
 
   return (
-    <div className="more-movie-main">
-      <h4>მეტი</h4>
-      <div className="more-movies">
-        {randomMovieList.length > 0
-          ? randomMovieList.map((e: any) => (
-              <div className="more-movie">
-                <img src={MoviesAPI[e].image} alt="" />
-                <h3 className="movie-title">{MoviesAPI[e].name}</h3>
-                <p className="movie-genre">{MoviesAPI[e].genres}</p>
-              </div>
-            ))
-          : null}
+    <div className="CardsRowwer">
+      <div className="ScrollStarter">
+        <div className="ScrollName">მეტი</div>
+        <div className="ScrollArrows">
+          <div className="Scrolls ScrollLeft">
+            <img src={scrollArrow} />
+          </div>
+          <div className="Scrolls ScrollRight">
+            <img src={scrollArrow} />
+          </div>
+        </div>
+      </div>
+      <div className="CardRow">
+        {MoviesAPI.map((e, i) =>
+          i < 5 ? (
+            <Card
+              id={e.id}
+              key={i}
+              image={e.image}
+              imdb={e.imdb}
+              title={e.name}
+              genres={e.genres}
+            />
+          ) : null
+        )}
       </div>
     </div>
   );

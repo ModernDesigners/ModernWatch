@@ -6,8 +6,8 @@ export default function Trailers() {
     <div className="trailers">
       <h4 className="header-text">თრეილერები</h4>
       <div className="trailer-movies">
-        {TrailersAPI.map((e) => (
-          <TrailerMovie title={e.title} image={e.image} />
+        {TrailersAPI.map((e, i) => (
+          <TrailerMovie key={i} title={e.title} image={e.image} />
         ))}
       </div>
     </div>

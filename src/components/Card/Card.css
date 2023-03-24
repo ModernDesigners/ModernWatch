@@ -1,3 +1,6 @@
+.Card a {
+  text-decoration: none;
+}
 .Card .cardImageSide {
   position: relative;
   height: 160px;
@@ -67,15 +70,22 @@
 .Card .cardImageSide:hover .hoverIMDb {
   opacity: 1;
 }
-.Card .cardTitle {
+.Card .cardInfo {
+  display: flex;
+  flex-direction: column;
+}
+.Card .cardInfo .cardTitle {
+  display: inline-block;
   font-family: k2d_r;
   color: white;
-  margin: 5px 0 3px 0;
+  margin: 5px 0 0px 0;
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.Card .cardDesc {
+.Card .cardInfo .cardDesc {
+  padding-top: 2px;
+  display: inline-block;
   font-family: k2d_r;
   color: rgba(255, 255, 255, 0.5);
   margin: 0;

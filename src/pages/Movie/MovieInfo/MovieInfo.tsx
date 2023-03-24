@@ -1,6 +1,7 @@
 import tup from "../../../images/icons/thumbs-up.png";
 import tdown from "../../../images/icons/thumbs-down.png";
-import avengers from "../../../images/posters/avengers.jpg";
+import logo from "../../../images/LogoH.webp";
+
 import "./MovieInfo.css";
 interface infoInterface {
   year: number;
@@ -8,6 +9,7 @@ interface infoInterface {
   time: string;
   country: string;
   studio: string;
+  poster: string;
 }
 export default function MovieInfo({
   studio,
@@ -15,10 +17,26 @@ export default function MovieInfo({
   genre,
   time,
   country,
+  poster,
 }: infoInterface) {
+  function hideLoader(img: any) {
+    const cardId = img.parentNode;
+    const loader = cardId.children[0];
+    loader.style.display = "none";
+  }
   return (
     <div className="movie-info">
-      <img className="movie-info-image" src={avengers} alt="" />
+      <div className="movie-poster">
+        <div className="cardLoader">
+          <img className="loaderImg" src={logo} />
+        </div>
+        <img
+          className="movie-info-image"
+          src={poster}
+          alt=""
+          onLoad={(e) => hideLoader(e.target)}
+        />
+      </div>
       <div className="movie-full-info">
         <div className="flex-info">
           <h4>სტუდიო:</h4>
@@ -34,7 +52,7 @@ export default function MovieInfo({
         </div>
         <div className="flex-info">
           <h4>ხანგრძლივობა:</h4>
-          <p>{time}წუთი</p>
+          <p>{time} წუთი</p>
         </div>
         <div className="flex-info">
           <h4>ქვეყანა:</h4>

@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router";
+import { useEffect, useState } from "react";
+import { Route, Routes, useLocation } from "react-router";
 import "./App.css";
 import Header from "./components/Header/Header";
 import LeftsideNavbar from "./components/LeftsideNavbar/LeftsideNavbar";
@@ -11,8 +12,21 @@ import Search from "./pages/Search/Search";
 import Trailers from "./pages/Trailers/Trailers";
 
 function App() {
+  let location = useLocation();
+  const [padding, setPadding] = useState(0);
+  useEffect(() => {
+    if (location.pathname.includes("Movie")) {
+      setPadding(1);
+    } else {
+      setPadding(0);
+    }
+  }, [location.pathname]);
+
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={padding ? { padding: 0, paddingLeft: 245 } : undefined}
+    >
       <LeftsideNavbar />
       <Header />
 
@@ -24,7 +38,7 @@ function App() {
           <Route path="Trailers" element={<Trailers />} />
           <Route path="Search" element={<Search />} />
           <Route path="ComingSoon" element={<ComingSoon />} />
-          <Route path="Movie" element={<Movie />} />
+          <Route path="Movie/:id" element={<Movie />} />
         </Route>
       </Routes>
     </div>

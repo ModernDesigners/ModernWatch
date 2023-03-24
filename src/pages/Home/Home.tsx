@@ -2,7 +2,7 @@ import { MoviesAPI } from "../../API/MoviesAPI";
 import "./Home.css";
 import Card from "../../components/Card/Card";
 import scrollArrow from "../../images/icons/arrow.png";
-import avengers from "../../images/posters/avengers.jpg";
+import avengers from "../../images/posters/avengers.webp";
 import wednesday from "../../images/posters/wednesday.webp";
 import moonknight from "../../images/posters/moonknight.webp";
 import logo from "../../images/LogoH.webp";
@@ -69,6 +69,7 @@ export default function Home() {
           {MoviesAPI.map((e, i) =>
             i < 5 ? (
               <Card
+                id={e.id}
                 key={i}
                 image={e.image}
                 imdb={e.imdb}
@@ -95,6 +96,7 @@ export default function Home() {
           {MoviesAPI.map((e, i) =>
             i < 5 ? (
               <Card
+                id={e.id}
                 key={i}
                 image={e.image}
                 imdb={e.imdb}

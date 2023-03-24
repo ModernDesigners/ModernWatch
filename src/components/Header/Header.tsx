@@ -46,7 +46,22 @@ export default function Header() {
       );
     }
   };
-
+  inputRef.current?.addEventListener("focusin", function () {
+    setOpenResults(1);
+  });
+  // inputRef.current?.addEventListener("focusout", function () {
+  //   setOpenResults(0);
+  // });
+  document.body.addEventListener("click", function (e: any) {
+    if (
+      openResults == 1 &&
+      e.target?.classList.value !== "search-results" &&
+      e.target?.classList.value !== "quick-search-input" &&
+      e.target?.classList.value !== "result-movies"
+    ) {
+      setOpenResults(0);
+    }
+  });
   return (
     <div className="Header">
       <div className="search-main">
@@ -55,8 +70,7 @@ export default function Header() {
             <input
               ref={inputRef}
               onChange={QuickSearch}
-              onFocus={() => setOpenResults(1)}
-              onBlur={() => setOpenResults(0)}
+              className="quick-search-input"
               type="text"
               placeholder="მოძებნა..."
             />
@@ -69,7 +83,8 @@ export default function Header() {
               ? searchedAPI.current.map((e: any, i: number) => (
                   <ResultMovie
                     key={i}
-                    image={e.image}
+                    id={e.id}
+                    imagePoster={e.imagePoster}
                     name={e.name}
                     genres={e.genres}
                     studio={e.studio}

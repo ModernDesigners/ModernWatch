@@ -1,4 +1,7 @@
 .Card {
+    a {
+        text-decoration: none;
+    }
     .cardImageSide {
         position: relative;
         height: 160px;
@@ -70,19 +73,26 @@
             }
         }
     }
-    .cardTitle {
-        font-family: k2d_r;
-        color: white;
-        margin: 5px 0 3px 0;
-        font-size: 14px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-    }
-    .cardDesc {
-        font-family: k2d_r;
-        color: rgba(255, 255, 255, 0.5);
-        margin: 0;
-        font-size: 11px;
-        letter-spacing: 1px;
+    .cardInfo {
+        display: flex;
+        flex-direction: column;
+        .cardTitle {
+            display: inline-block;
+            font-family: k2d_r;
+            color: white;
+            margin: 5px 0 0px 0;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .cardDesc {
+            padding-top: 2px;
+            display: inline-block;
+            font-family: k2d_r;
+            color: rgba(255, 255, 255, 0.5);
+            margin: 0;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
     }
 }

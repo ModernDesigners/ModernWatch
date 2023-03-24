@@ -7,8 +7,13 @@ export default function Genres() {
     <div className="genres">
       <h4 className="header-text">ჟანრები</h4>
       <div className="genres-card-main">
-        {GenresAPI.map((e) => (
-          <GenreCard link={e.navigateTo} title={e.title} image={e.img} />
+        {GenresAPI.map((e, i) => (
+          <GenreCard
+            key={i}
+            link={e.navigateTo}
+            title={e.title}
+            image={e.img}
+          />
         ))}
       </div>
     </div>

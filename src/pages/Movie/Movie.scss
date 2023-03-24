@@ -6,12 +6,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .banner-image {
+    .back-image {
+      user-select: none;
+      position: absolute;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      position: absolute;
-      filter: brightness(40%);
+      top: 0;
+      left: 0;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to top, rgba(5, 6, 19, 1), transparent);
+        z-index: 1;
+      }
+      .banner-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        filter: brightness(40%);
+      }
     }
     .movie-play {
       position: relative;
@@ -21,7 +39,9 @@
       border-radius: 5px;
       display: flex;
       justify-content: center;
+      overflow: hidden;
       align-items: center;
+      z-index: 2;
       .movie-image {
         width: 100%;
         height: 100%;
@@ -44,25 +64,62 @@
         }
       }
     }
-    .movie-imdb {
+    .movie-additions {
       position: absolute;
-      bottom: 20px;
-      left: 50px;
-      width: 120px;
-      height: 29px;
+      bottom: 50px;
+      width: 90%;
       display: flex;
-      border-radius: 15px;
-      justify-content: center;
       align-items: center;
-      background: rgba(0, 255, 209, 0.1);
-      color: #00ffd1;
-      h3 {
-        font-size: 14px;
+      justify-content: space-between;
+      z-index: 2;
+
+      .movie-imdb {
+        width: 120px;
+        height: 30px;
+        display: flex;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 255, 209, 0.1);
+        color: #00ffd1;
+        h3 {
+          font-size: 14px;
+        }
+      }
+      .lang-buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .lang-b {
+          letter-spacing: 1px;
+          cursor: pointer;
+          height: 25px;
+          width: 50px;
+          font-size: 13px;
+          font-family: k2d_b;
+          display: flex;
+          border-radius: 5px;
+          justify-content: center;
+          align-items: center;
+
+          background: rgba(0, 255, 209, 0.1);
+          color: #00ffd1;
+          transition: 0.2s;
+          &:hover {
+            background: #00ffd1;
+            color: #050613;
+          }
+        }
+        .lang-b-active {
+          background: #00ffd1;
+          color: #050613;
+        }
       }
     }
   }
   .movie-info-main {
     padding: 50px 0px;
+
     display: flex;
     justify-content: space-between;
     .movie-info-rightside {
@@ -77,4 +134,27 @@
       }
     }
   }
+  .more-movies {
+    margin-top: 30px;
+  }
+}
+.cardLoader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #0c0e25;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  animation: Loader 1.5s infinite ease-in-out;
+  justify-content: center;
+  img {
+    height: 70px;
+    width: 70px;
+    animation: LoaderImg 1.5s infinite linear;
+    opacity: 0.4;
+  }
+}
+.movie-info-content {
+  padding: 0 30px;
 }
