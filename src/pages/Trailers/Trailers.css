@@ -9,7 +9,7 @@
 }
 .trailers .trailer-movies .trailer-movie {
   width: 49%;
-  height: 210px;
+  height: 310px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,3 +35,15 @@
 .trailers .trailer-movies .trailer-movie:hover .blur {
   opacity: 0.8;
 }
+
+@media screen and (max-width: 1400px) {
+  .trailers .trailer-movies {
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 790px) {
+  .trailers .trailer-movies .trailer-movie {
+    width: 100%;
+    height: 250px;
+  }
+}/*# sourceMappingURL=Trailers.css.map */

@@ -12,6 +12,9 @@ import Search from "./pages/Search/Search";
 import Trailers from "./pages/Trailers/Trailers";
 
 function App() {
+  const [favorites, setFavorites] = useState<Array<number>>([]);
+  console.log(favorites);
+
   let location = useLocation();
   const [padding, setPadding] = useState(0);
   useEffect(() => {
@@ -38,7 +41,12 @@ function App() {
           <Route path="Trailers" element={<Trailers />} />
           <Route path="Search" element={<Search />} />
           <Route path="ComingSoon" element={<ComingSoon />} />
-          <Route path="Movie/:id" element={<Movie />} />
+          <Route
+            path="Movie/:id"
+            element={
+              <Movie favorites={favorites} setFavorites={setFavorites} />
+            }
+          />
         </Route>
       </Routes>
     </div>

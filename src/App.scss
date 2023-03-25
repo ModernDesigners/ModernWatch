@@ -97,3 +97,11 @@ h5 {
     rotate: 360deg;
   }
 }
+@media screen and (max-width: 1400px) {
+  .App {
+    padding: 0px 30px;
+    .leftside-navbar {
+      left: -100%;
+    }
+  }
+}

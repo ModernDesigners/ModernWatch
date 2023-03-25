@@ -8,11 +8,15 @@ import logo from "../../images/LogoH.webp";
 import { useParams } from "react-router";
 import { MoviesAPI } from "../../API/MoviesAPI";
 
-export default function Movie() {
+export default function Movie(props: {
+  setFavorites: any;
+  favorites: Array<number>;
+}) {
   let linkInfo: any = useParams();
   let linkId = parseInt(linkInfo.id);
   const movieGet: any = MoviesAPI.filter((e) => e.id == linkId);
   const movieInfo = movieGet[0];
+
   function hideLoader(img: any) {
     const cardId = img.parentNode;
     const loader = cardId.children[0];
@@ -60,6 +64,9 @@ export default function Movie() {
             country={movieInfo.country}
             genre={movieInfo.genres}
             poster={movieInfo.imagePoster}
+            id={movieInfo.id}
+            setFavorites={props.setFavorites}
+            favorites={props.favorites}
           />
           <div className="movie-info-rightside">
             <h4>აღწერა</h4>

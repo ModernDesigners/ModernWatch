@@ -1,6 +1,7 @@
 import tup from "../../../images/icons/thumbs-up.png";
 import tdown from "../../../images/icons/thumbs-down.png";
 import logo from "../../../images/LogoH.webp";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
 import "./MovieInfo.css";
 interface infoInterface {
@@ -10,6 +11,9 @@ interface infoInterface {
   country: string;
   studio: string;
   poster: string;
+  id: number;
+  setFavorites: any;
+  favorites: Array<number>;
 }
 export default function MovieInfo({
   studio,
@@ -18,7 +22,18 @@ export default function MovieInfo({
   time,
   country,
   poster,
+  id,
+  setFavorites,
+  favorites,
 }: infoInterface) {
+  function addToFavorite() {
+    if (favorites.includes(id)) {
+      let removeFavorite = favorites.filter((e: number) => e !== id);
+      setFavorites(removeFavorite);
+    } else {
+      setFavorites([...favorites, id]);
+    }
+  }
   function hideLoader(img: any) {
     const cardId = img.parentNode;
     const loader = cardId.children[0];
@@ -62,6 +77,23 @@ export default function MovieInfo({
           <button>თვის ფილმი</button>
           <button>{studio} ფანი</button>
         </div>
+        <div
+          className={`favorites ${favorites.includes(id) ? "favorited" : ""}`}
+          onClick={addToFavorite}
+        >
+          {!favorites.includes(id) ? (
+            <>
+              <AiOutlineHeart />
+              <p>Add to Favorites</p>
+            </>
+          ) : (
+            <>
+              <AiFillHeart />
+              <p>Added to Favorites</p>
+            </>
+          )}
+        </div>
+
         <div className="rating">
           <h4>შეფასება</h4>
           <div className="thumbs">

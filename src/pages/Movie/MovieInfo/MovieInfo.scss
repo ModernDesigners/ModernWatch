@@ -29,8 +29,8 @@
     .movie-buttons {
       display: flex;
       gap: 15px;
-      margin: 15px 0px;
-      margin-bottom: 30px;
+      margin: 15px 0px 0px 0px;
+      margin-bottom: 20px;
       button:nth-child(1) {
         padding: 6px 20px;
 
@@ -64,9 +64,36 @@
         }
       }
     }
+    .favorites {
+      display: flex;
+      background: rgba(56, 55, 55, 0.3);
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: rgba(89, 88, 88, 0.4);
+      }
+
+      p {
+        color: #fff;
+        user-select: none;
+      }
+      svg {
+        color: #fff;
+        user-select: none;
+      }
+    }
     .rating {
       position: absolute;
       bottom: 0;
+      h4 {
+        user-select: none;
+      }
       .thumbs {
         margin-top: 12px;
         display: flex;
@@ -88,6 +115,7 @@
             background: rgba(0, 255, 25, 0.2);
             h5 {
               font-size: 15px;
+
               color: #00ff19;
             }
             &:hover {

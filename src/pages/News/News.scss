@@ -46,7 +46,11 @@
       }
     }
     .blur {
-      background: linear-gradient(to top, rgba(12, 14, 37, 0.95), rgba(12, 14, 37, 0));
+      background: linear-gradient(
+        to top,
+        rgba(12, 14, 37, 0.95),
+        rgba(12, 14, 37, 0)
+      );
       position: absolute;
       left: 0px;
       top: 0px;
@@ -106,7 +110,11 @@
       }
       .blur {
         position: absolute;
-        background: linear-gradient(to top, rgba(12, 14, 37, 0.95), rgba(12, 14, 37, 0));
+        background: linear-gradient(
+          to top,
+          rgba(12, 14, 37, 0.95),
+          rgba(12, 14, 37, 0)
+        );
         cursor: pointer;
         border-radius: 4px;
 
@@ -115,6 +123,41 @@
         width: 100%;
         height: 100%;
         transition: 0.2s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .news {
+    .main-movie {
+      height: 300px;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .news {
+    .main-movie {
+      height: 300px;
+      img {
+        height: 100%;
+      }
+      .info {
+        h2 {
+          font-size: 17px;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+    .news-movie-main {
+      .news-movie {
+        width: 100%;
       }
     }
   }
