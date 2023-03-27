@@ -36,8 +36,8 @@ export const GenresAPI = [
   },
   {
     img: romantic,
-    title: "რომანტიკა",
-    navigateTo: "Romantic",
+    title: "დრამა",
+    navigateTo: "Drama",
   },
   {
     img: anime,

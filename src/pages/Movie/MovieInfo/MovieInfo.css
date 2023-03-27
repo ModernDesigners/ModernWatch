@@ -13,8 +13,10 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   border-radius: 10px;
 }
 .movie-info .movie-full-info {
@@ -80,18 +82,24 @@
 }
 .movie-info .movie-full-info .favorites p {
   color: #fff;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .movie-info .movie-full-info .favorites svg {
   color: #fff;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .movie-info .movie-full-info .rating {
   position: absolute;
   bottom: 0;
 }
 .movie-info .movie-full-info .rating h4 {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .movie-info .movie-full-info .rating .thumbs {
   margin-top: 12px;
@@ -131,4 +139,4 @@
 }
 .movie-info .movie-full-info .rating .thumbs div:nth-child(2):hover {
   background: rgba(255, 0, 0, 0.3);
-}
+}/*# sourceMappingURL=MovieInfo.css.map */

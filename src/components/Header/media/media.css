@@ -1,0 +1,33 @@
+@media screen and (max-width: 1400px) {
+  .Header {
+    width: 100%;
+    left: 0px;
+    padding: 0px 50px;
+  }
+}
+@media screen and (max-width: 1110px) {
+  .Header .headerP {
+    display: none;
+  }
+}
+@media screen and (max-width: 771px) {
+  .Header {
+    background-color: #050613;
+    top: 0px;
+    height: 100px;
+  }
+  .Header .search-main .quick-search-input {
+    width: 300px !important;
+  }
+}
+@media screen and (max-width: 590px) {
+  .Header {
+    flex-direction: column;
+    height: 150px;
+    justify-content: center;
+    gap: 20px;
+  }
+  .Header .search-main .quick-search-input {
+    width: 300px !important;
+  }
+}/*# sourceMappingURL=media.css.map */

@@ -9,6 +9,7 @@ import { useRef } from "react";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import ResultMovie from "./components/ResultMovie";
+import "./media/media.css";
 
 export default function Header() {
   const location = useLocation();

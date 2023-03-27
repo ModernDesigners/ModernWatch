@@ -121,7 +121,8 @@
   height: 100%;
   width: 100%;
   border-radius: 14px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .MainSplitter .MiniSec {
   width: 40%;
@@ -175,7 +176,8 @@
   height: 100%;
   width: 100%;
   border-radius: 9px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .MainSplitter .MiniSec .MiniCard .MiniCardTitle {
   position: absolute;
@@ -200,4 +202,4 @@
   .MainSplitter .MiniSec {
     width: 100%;
   }
-}
+}/*# sourceMappingURL=Home.css.map */

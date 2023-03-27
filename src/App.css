@@ -15,6 +15,10 @@
   margin: 0px;
   box-sizing: border-box;
 }
+*::-moz-selection {
+  background: #00c19e;
+  color: white;
+}
 *::selection {
   background: #00c19e;
   color: white;
@@ -108,14 +112,14 @@ h5 {
 }
 @media screen and (max-width: 1400px) {
   .App {
-    padding: 0px 30px;
+    padding: 60px 30px;
   }
   .App .leftside-navbar {
     left: -100%;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 590px) {
   .App {
-    padding: 0px 10px;
+    padding: 120px 10px;
   }
-}
+}/*# sourceMappingURL=App.css.map */

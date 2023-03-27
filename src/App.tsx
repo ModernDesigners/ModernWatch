@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import LeftsideNavbar from "./components/LeftsideNavbar/LeftsideNavbar";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
+import GenreResults from "./pages/Genres/GenreResult/GenreResults";
 import Genres from "./pages/Genres/Genres";
 import Home from "./pages/Home/Home";
 import Movie from "./pages/Movie/Movie";
@@ -13,7 +14,6 @@ import Trailers from "./pages/Trailers/Trailers";
 
 function App() {
   const [favorites, setFavorites] = useState<Array<number>>([]);
-  console.log(favorites);
 
   let location = useLocation();
   const [padding, setPadding] = useState(0);
@@ -37,6 +37,7 @@ function App() {
         <Route path="/">
           <Route index element={<Home />} />
           <Route path="Genres" element={<Genres />} />
+          <Route path="Genres/:genre" element={<GenreResults />} />
           <Route path="News" element={<News />} />
           <Route path="Trailers" element={<Trailers />} />
           <Route path="Search" element={<Search />} />
