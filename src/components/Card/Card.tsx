@@ -7,6 +7,7 @@ interface CardInterface {
   imdb: number;
   title: string;
   genres: string;
+  reff: any;
 }
 export default function Card({
   id,
@@ -14,6 +15,7 @@ export default function Card({
   imdb,
   title,
   genres,
+  reff,
 }: CardInterface) {
   function hideLoader(img: any) {
     const cardId = img.parentNode;
@@ -21,7 +23,7 @@ export default function Card({
     loader.style.display = "none";
   }
   return (
-    <div className="Card">
+    <div ref={reff} className="Card">
       <Link to={"/Movie/" + id}>
         <div className="cardImageSide">
           <div className="cardLoader">

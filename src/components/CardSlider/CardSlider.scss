@@ -1,0 +1,54 @@
+.CardsRowwer {
+    margin-bottom: 60px;
+    .ScrollStarter {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .ScrollName {
+            color: white;
+            font-family: main_geo;
+            letter-spacing: 2px;
+            font-size: 22px;
+        }
+        .ScrollArrows {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .Scrolls {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                img {
+                    height: 20px;
+                }
+            }
+            .ScrollRight {
+                rotate: 180deg;
+            }
+        }
+    }
+    .CardRow {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    .CardsRowwer .ScrollStarter .ScrollName {
+        font-size: 16px;
+    }
+    .CardsRowwer .ScrollStarter .ScrollArrows .Scrolls img {
+        height: 15px;
+    }
+    .CardsRowwer .ScrollStarter {
+        margin-bottom: 15px;
+    }
+}

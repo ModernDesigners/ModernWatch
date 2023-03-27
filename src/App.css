@@ -15,10 +15,6 @@
   margin: 0px;
   box-sizing: border-box;
 }
-*::-moz-selection {
-  background: #00c19e;
-  color: white;
-}
 *::selection {
   background: #00c19e;
   color: white;
@@ -117,4 +113,9 @@ h5 {
   .App .leftside-navbar {
     left: -100%;
   }
-}/*# sourceMappingURL=App.css.map */
+}
+@media screen and (max-width: 1000px) {
+  .App {
+    padding: 0px 10px;
+  }
+}

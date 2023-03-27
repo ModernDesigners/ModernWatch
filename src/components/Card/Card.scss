@@ -96,3 +96,19 @@
         }
     }
 }
+@media screen and (max-width: 1000px) {
+    .Card {
+        .cardImageSide {
+            height: 100px;
+            width: 220px;
+        }
+        .cardInfo {
+            .cardTitle {
+                font-size: 11px;
+            }
+            .cardDesc {
+                font-size: 10px;
+            }
+        }
+    }
+}

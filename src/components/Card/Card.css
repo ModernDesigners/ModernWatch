@@ -92,3 +92,16 @@
   font-size: 11px;
   letter-spacing: 1px;
 }
+
+@media screen and (max-width: 1000px) {
+  .Card .cardImageSide {
+    height: 100px;
+    width: 220px;
+  }
+  .Card .cardInfo .cardTitle {
+    font-size: 11px;
+  }
+  .Card .cardInfo .cardDesc {
+    font-size: 10px;
+  }
+}

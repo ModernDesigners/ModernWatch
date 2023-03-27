@@ -188,3 +188,16 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
+@media screen and (max-width: 1300px) {
+  .MainSplitter {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .MainSplitter .MainSec {
+    width: 100%;
+  }
+  .MainSplitter .MiniSec {
+    width: 100%;
+  }
+}

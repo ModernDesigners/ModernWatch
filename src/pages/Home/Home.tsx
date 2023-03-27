@@ -6,6 +6,8 @@ import avengers from "../../images/posters/avengers.webp";
 import wednesday from "../../images/posters/wednesday.webp";
 import moonknight from "../../images/posters/moonknight.webp";
 import logo from "../../images/LogoH.webp";
+import { Link } from "react-router-dom";
+import CardSlider from "../../components/CardSlider/CardSlider";
 
 export default function Home() {
   function hideLoader(img: any) {
@@ -25,7 +27,9 @@ export default function Home() {
           <img src={avengers} onLoad={(e) => hideLoader(e.target)} />
           <div className="MainBar">
             <div className="bSide">
-              <button className="mainB watchB">უყურე</button>
+              <Link to="Movie/2">
+                <button className="mainB watchB">უყურე</button>
+              </Link>
               <button className="mainB trailerB">თრეილერი</button>
             </div>
             <div className="tSide">
@@ -35,78 +39,28 @@ export default function Home() {
           </div>
         </div>
         <div className="HomeStarterSections MiniSec">
-          <div className="MiniCard">
+          <Link className="MiniCard" to="Movie/8">
             <div className="cardLoader">
               <img className="loaderImg" src={logo} />
             </div>
             <div className="blur"></div>
             <img src={wednesday} onLoad={(e) => hideLoader(e.target)} />
             <div className="MiniCardTitle">Wednesday</div>
-          </div>
-          <div className="MiniCard">
+          </Link>
+          <Link className="MiniCard" to="Movie/11">
             <div className="cardLoader">
               <img className="loaderImg" src={logo} />
             </div>
             <div className="blur"></div>
             <img src={moonknight} onLoad={(e) => hideLoader(e.target)} />
             <div className="MiniCardTitle">Moon Knight</div>
-          </div>
+          </Link>
         </div>
       </div>
-      <div className="CardsRowwer">
-        <div className="ScrollStarter">
-          <div className="ScrollName">ახალი</div>
-          <div className="ScrollArrows">
-            <div className="Scrolls ScrollLeft">
-              <img src={scrollArrow} />
-            </div>
-            <div className="Scrolls ScrollRight">
-              <img src={scrollArrow} />
-            </div>
-          </div>
-        </div>
-        <div className="CardRow">
-          {MoviesAPI.map((e, i) =>
-            i < 5 ? (
-              <Card
-                id={e.id}
-                key={i}
-                image={e.image}
-                imdb={e.imdb}
-                title={e.name}
-                genres={e.genres}
-              />
-            ) : null
-          )}
-        </div>
-      </div>
-      <div className="CardsRowwer">
-        <div className="ScrollStarter">
-          <div className="ScrollName">რეკომენდირებული</div>
-          <div className="ScrollArrows">
-            <div className="Scrolls ScrollLeft">
-              <img src={scrollArrow} />
-            </div>
-            <div className="Scrolls ScrollRight">
-              <img src={scrollArrow} />
-            </div>
-          </div>
-        </div>
-        <div className="CardRow">
-          {MoviesAPI.map((e, i) =>
-            i < 5 ? (
-              <Card
-                id={e.id}
-                key={i}
-                image={e.image}
-                imdb={e.imdb}
-                title={e.name}
-                genres={e.genres}
-              />
-            ) : null
-          )}
-        </div>
-      </div>
+
+      <CardSlider title="ახალი" />
+
+      <CardSlider title="რეკომენდირებული" />
     </div>
   );
 }

@@ -9,6 +9,7 @@ import spacejam from "../images/posters/spaceJam.webp";
 import wednesday from "../images/posters/wednesday.webp";
 import croods from "../images/posters/croods.webp";
 import teenwolf from "../images/posters/teen-wolf-movie-poster.webp";
+import Moonknight from "../images/posters/Moonknight.webp";
 
 // POSTERS
 import spidermanP from "../images/banners/Spiderman.webp";
@@ -21,6 +22,7 @@ import spacejamP from "../images/banners/SpaceJam.webp";
 import wednesdayP from "../images/banners/Wednesday.webp";
 import croodsP from "../images/banners/Croods.webp";
 import teenwolfP from "../images/banners/Teenwolf.webp";
+import MoonknightP from "../images/banners/Moonknight.webp";
 
 export const MoviesAPI = [
   {
@@ -98,7 +100,7 @@ export const MoviesAPI = [
   },
   {
     id: 6,
-    name: "Madagascare",
+    name: "Madagascar",
     image: madagascar,
     imagePoster: madagascarP,
     genres: "FAMILY, COMEDY",
@@ -170,5 +172,20 @@ export const MoviesAPI = [
     description:
       "A terrifying evil has emerged, and the wolves howl once again. Only a Werewolf like Scott McCall can gather both new allies and reunite trusted friends to fight back against what could be the most powerful and deadliest enemy.",
     imdb: 5.6,
+  },
+  {
+    id: 11,
+    name: "Moon Knight",
+    image: Moonknight,
+    imagePoster: MoonknightP,
+    genres: "ACTION, ADVENTURE, FANSTASY",
+    banner: "",
+    studio: "MARVEL",
+    year: 2022,
+    time: "50-60",
+    country: "აშშ",
+    description:
+      "Steven Grant discovers he's been granted the powers of an Egyptian moon god. But he soon finds out that these newfound powers can be both a blessing and a curse to his troubled life.",
+    imdb: 7.3,
   },
 ];
