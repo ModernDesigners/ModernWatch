@@ -14,6 +14,7 @@ import Trailers from "./pages/Trailers/Trailers";
 
 function App() {
   const [favorites, setFavorites] = useState<Array<number>>([]);
+  const [navToggle, setNavToggle] = useState(false);
 
   let location = useLocation();
   const [padding, setPadding] = useState(0);
@@ -23,6 +24,7 @@ function App() {
     } else {
       setPadding(0);
     }
+    setNavToggle(false);
   }, [location.pathname]);
 
   return (
@@ -30,7 +32,7 @@ function App() {
       className="App"
       style={padding ? { padding: 0, paddingLeft: 245 } : undefined}
     >
-      <LeftsideNavbar />
+      <LeftsideNavbar navToggle={navToggle} setNavToggle={setNavToggle} />
       <Header />
 
       <Routes>

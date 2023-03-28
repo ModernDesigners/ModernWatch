@@ -22,12 +22,9 @@
 }
 @media screen and (max-width: 590px) {
   .Header {
-    flex-direction: column;
-    height: 150px;
-    justify-content: center;
-    gap: 20px;
+    display: none;
   }
   .Header .search-main .quick-search-input {
     width: 300px !important;
   }
-}/*# sourceMappingURL=media.css.map */
+}

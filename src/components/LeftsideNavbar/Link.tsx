@@ -4,22 +4,23 @@ interface LinkINT {
   title: string;
   icon: string;
   setActive: any;
-  active: number;
   index: number;
   navigateTo: string;
+  isActive: boolean;
 }
 export default function Link({
   title,
   icon,
   setActive,
-  active,
   index,
   navigateTo,
+  isActive,
 }: LinkINT) {
   const navigate = useNavigate();
+
   return (
     <div
-      className={`nav-link ${active === index ? "active" : ""}`}
+      className={`nav-link  ${isActive === true ? "active" : ""}`}
       onClick={() => {
         setActive(index);
         navigate(navigateTo);
