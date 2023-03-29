@@ -1,10 +1,9 @@
-import avengers from "../../images/posters/avengers.webp";
 import "./Movie.css";
 import play from "../../images/icons/white-play.png";
 import MovieInfo from "./MovieInfo/MovieInfo";
 import MoreMovie from "./MoreMovie/MoreMovie";
 import logo from "../../images/LogoH.webp";
-
+import "./MovieQuery/MovieQuery.css";
 import { useParams } from "react-router";
 import { MoviesAPI } from "../../API/MoviesAPI";
 

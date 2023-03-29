@@ -8,7 +8,9 @@
   border-radius: 10px;
   background: #0c0e25;
   overflow: hidden;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   cursor: pointer;
 }
 .Card .cardImageSide .cardLoader {
@@ -52,7 +54,8 @@
   height: 100%;
   border-radius: 12px;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .Card .cardImageSide::before {
   content: "";
@@ -104,4 +107,4 @@
   .Card .cardInfo .cardDesc {
     font-size: 10px;
   }
-}
+}/*# sourceMappingURL=Card.css.map */

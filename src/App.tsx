@@ -28,10 +28,7 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <div
-      className="App"
-      style={padding ? { padding: 0, paddingLeft: 245 } : undefined}
-    >
+    <div className={`${padding ? "navPad" : undefined} App`}>
       <LeftsideNavbar navToggle={navToggle} setNavToggle={setNavToggle} />
       <Header />
 

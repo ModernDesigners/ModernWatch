@@ -1,0 +1,24 @@
+.genre-results {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  .Card {
+    width: 48%;
+    .cardImageSide {
+      width: 100%;
+      height: 220px;
+    }
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .genre-results {
+    .Card {
+      .cardImageSide {
+        width: 100%;
+        height: 160px;
+      }
+      width: 100%;
+    }
+  }
+}

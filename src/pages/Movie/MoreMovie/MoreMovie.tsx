@@ -1,8 +1,5 @@
-import "./MoreMovie.css";
 import { MoviesAPI } from "../../../API/MoviesAPI";
-import scrollArrow from "../../../images/icons/arrow.png";
 import { useEffect } from "react";
-import Card from "../../../components/Card/Card";
 import CardSlider from "../../../components/CardSlider/CardSlider";
 export default function MoreMovie() {
   useEffect(() => {}, []);

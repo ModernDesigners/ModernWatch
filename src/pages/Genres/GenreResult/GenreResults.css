@@ -1,0 +1,22 @@
+.genre-results {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.genre-results .Card {
+  width: 48%;
+}
+.genre-results .Card .cardImageSide {
+  width: 100%;
+  height: 220px;
+}
+
+@media screen and (max-width: 590px) {
+  .genre-results .Card {
+    width: 100%;
+  }
+  .genre-results .Card .cardImageSide {
+    width: 100%;
+    height: 160px;
+  }
+}/*# sourceMappingURL=GenreResults.css.map */

@@ -48,7 +48,8 @@
 .Header .search-main .search-results .result-movies .result-movie img {
   height: 170px;
   width: 121px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 .Header .search-main .search-results .result-movies .result-movie .result-movie-info {
@@ -107,6 +108,9 @@
   outline: none;
   background: #111433;
 }
+.Header .search-main .headerSearch input::-moz-placeholder {
+  color: #313561;
+}
 .Header .search-main .headerSearch input::placeholder {
   color: #313561;
 }
@@ -155,4 +159,4 @@
 }
 .Header .headerButtons .headerMicroButtons:hover {
   background: #111433;
-}
+}/*# sourceMappingURL=Header.css.map */

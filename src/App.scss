@@ -97,6 +97,9 @@ h5 {
     rotate: 360deg;
   }
 }
+.navPad {
+  padding: 0 0 0 245px;
+}
 @media screen and (max-width: 1400px) {
   .App {
     padding: 60px 30px;
@@ -107,6 +110,6 @@ h5 {
 }
 @media screen and (max-width: 590px) {
   .App {
-    padding: 50px 10px;
+    padding: 0px 10px;
   }
 }

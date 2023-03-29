@@ -15,7 +15,7 @@ export default function GenreResults() {
   };
 
   return (
-    <div>
+    <div className="genre-results">
       {MoviesAPI.map((e: any, i) =>
         params.genre &&
         genreToArray(i).includes(params.genre?.toLowerCase()) ? (
