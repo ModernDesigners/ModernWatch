@@ -1,14 +1,15 @@
+.genreTitle {
+  color: white;
+  font-size: 24px;
+  margin: 30px 0;
+  font-family: main_geo;
+  letter-spacing: 4px;
+}
+
 .genre-results {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-}
-.genre-results .Card {
-  width: 48%;
-}
-.genre-results .Card .cardImageSide {
-  width: 100%;
-  height: 220px;
 }
 
 @media screen and (max-width: 590px) {
@@ -19,4 +20,4 @@
     width: 100%;
     height: 160px;
   }
-}/*# sourceMappingURL=GenreResults.css.map */
+}

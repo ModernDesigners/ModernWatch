@@ -3,6 +3,7 @@
     display: flex;
     gap: 30px;
     padding: 50px 0px;
+    padding-bottom: 20px;
     .search-input {
       height: 45px;
       border-radius: 5px;
@@ -30,6 +31,7 @@
         font-family: main_geo;
       }
     }
+
     button {
       font-family: main_geo;
       width: 244px;
@@ -46,8 +48,16 @@
   }
   .search-filter {
     display: flex;
+    align-items: center;
     gap: 23px;
-
+    flex-wrap: wrap;
+    background: #0c0e25;
+    border-radius: 10px;
+    transition: 0.2s;
+    height: 0px;
+    padding: 0px 20px;
+    overflow: hidden;
+    position: relative;
     .filter {
       position: relative;
       &:hover {
@@ -96,11 +106,37 @@
       }
     }
   }
+  .filtersShow {
+    height: 80px;
+    scale: 1;
+  }
+  .closeFilters {
+    position: absolute;
+    color: #1e245a;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+  }
   .search-cards {
     padding: 50px 0px;
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
     justify-content: center;
+  }
+}
+@media (max-width: 1094px) {
+  .search {
+    .search-filter {
+      transition: 0s;
+    }
+    .filtersShow {
+      height: auto;
+      padding: 20px;
+      padding-right: 60px;
+    }
+    .closeFilters {
+      top: 20px;
+    }
   }
 }

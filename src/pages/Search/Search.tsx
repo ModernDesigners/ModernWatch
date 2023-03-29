@@ -6,6 +6,7 @@ import { MoviesAPI } from "../../API/MoviesAPI";
 import Card from "../../components/Card/Card";
 import { useEffect, useRef, useState } from "react";
 import { useLocation, useParams } from "react-router";
+import { MdClose } from "react-icons/md";
 export default function Search() {
   const seeGets = useLocation();
   const searchParams = new URLSearchParams(seeGets.search);
@@ -15,6 +16,7 @@ export default function Search() {
       : undefined;
   const [searchInput, setSearchInput] = useState(getSearchT);
   const [searchedRow, setsearchedRow] = useState(0);
+  const [showFilters, setShowFilters] = useState(false);
   useEffect(() => {
     setSearchInput(getSearchT);
   }, [seeGets.search]);
@@ -41,9 +43,9 @@ export default function Search() {
           />
           <img src={searchIcon} alt="" />
         </div>
-        <button>ფილტრები</button>
+        <button onClick={() => setShowFilters(!showFilters)}>ფილტრები</button>
       </div>
-      <div className="search-filter">
+      <div className={`search-filter ${showFilters ? "filtersShow" : ""}`}>
         {FilterAPI.map((e, i) => (
           <div key={i} className="filter">
             <div className="filter-flex">
@@ -59,6 +61,10 @@ export default function Search() {
             </div>
           </div>
         ))}
+        <MdClose
+          onClick={() => setShowFilters(false)}
+          className="closeFilters"
+        />
       </div>
       <div className="search-cards">
         {searchedAPI.map((e: any, i: number) => (

@@ -7,7 +7,7 @@ interface CardInterface {
   imdb: number;
   title: string;
   genres: string;
-  reff: any;
+  reff?: any;
 }
 export default function Card({
   id,

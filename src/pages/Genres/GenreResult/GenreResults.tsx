@@ -2,6 +2,7 @@ import "./GenreResults.css";
 import { MoviesAPI } from "../../../API/MoviesAPI";
 import Card from "../../../components/Card/Card";
 import { useLocation, useParams } from "react-router";
+import { GenresAPI } from "../../../API/GenresAPI";
 export default function GenreResults() {
   const params = useParams();
 
@@ -13,24 +14,32 @@ export default function GenreResults() {
 
     return element;
   };
+  let getGenreName = "არასწორი ჟანრის ტიპი";
+  let seeGenre = GenresAPI.filter((e) => e.navigateTo == params.genre);
+  if (seeGenre.length == 1) {
+    getGenreName = seeGenre[0].title;
+  }
 
   return (
-    <div className="genre-results">
-      {MoviesAPI.map((e: any, i) =>
-        params.genre &&
-        genreToArray(i).includes(params.genre?.toLowerCase()) ? (
-          <Card
-            id={e.id}
-            image={e.image}
-            imdb={e.imdb}
-            title={e.title}
-            genres={e.genres}
-            reff={undefined}
-          />
-        ) : (
-          false
-        )
-      )}
-    </div>
+    <>
+      <div className="genreTitle">{getGenreName}</div>
+      <div className="genre-results">
+        {MoviesAPI.map((e: any, i) =>
+          params.genre &&
+          genreToArray(i).includes(params.genre?.toLowerCase()) ? (
+            <Card
+              key={e.id}
+              id={e.id}
+              image={e.image}
+              imdb={e.imdb}
+              title={e.name}
+              genres={e.genres}
+            />
+          ) : (
+            false
+          )
+        )}
+      </div>
+    </>
   );
 }

@@ -2,6 +2,7 @@
   display: flex;
   gap: 30px;
   padding: 50px 0px;
+  padding-bottom: 20px;
 }
 .search .search-header .search-input {
   height: 45px;
@@ -45,7 +46,16 @@
 }
 .search .search-filter {
   display: flex;
+  align-items: center;
   gap: 23px;
+  flex-wrap: wrap;
+  background: #0c0e25;
+  border-radius: 10px;
+  transition: 0.2s;
+  height: 0px;
+  padding: 0px 20px;
+  overflow: hidden;
+  position: relative;
 }
 .search .search-filter .filter {
   position: relative;
@@ -90,10 +100,35 @@
   cursor: pointer;
   text-align: center;
 }
+.search .filtersShow {
+  height: 80px;
+  scale: 1;
+}
+.search .closeFilters {
+  position: absolute;
+  color: #1e245a;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
 .search .search-cards {
   padding: 50px 0px;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
   justify-content: center;
-}/*# sourceMappingURL=Search.css.map */
+}
+
+@media (max-width: 1094px) {
+  .search .search-filter {
+    transition: 0s;
+  }
+  .search .filtersShow {
+    height: auto;
+    padding: 20px;
+    padding-right: 60px;
+  }
+  .search .closeFilters {
+    top: 20px;
+  }
+}
