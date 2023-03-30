@@ -22,9 +22,17 @@
 }
 @media screen and (max-width: 590px) {
   .Header {
+    z-index: 6;
+    height: 60px;
+    padding: 0 10px;
+  }
+  .Header .headerButtons {
     display: none;
   }
-  .Header .search-main .quick-search-input {
-    width: 300px !important;
+  .Header .search-main {
+    position: unset;
   }
-}/*# sourceMappingURL=media.css.map */
+  .Header .search-main .search-results {
+    width: 100%;
+  }
+}

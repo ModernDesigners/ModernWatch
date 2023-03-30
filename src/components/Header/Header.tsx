@@ -10,8 +10,10 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import ResultMovie from "./components/ResultMovie";
 import "./media/media.css";
-
-export default function Header() {
+export default function Header(props: {
+  setOpenResults: any;
+  openResults: number;
+}) {
   const location = useLocation();
   const [searchINP, setSearchINP] = useState(1);
   const searchedAPI: any = useRef(null);
@@ -28,7 +30,6 @@ export default function Header() {
   const inputRef = useRef<any>(null);
   const navigate = useNavigate();
   const [navSearch, setNavSearch] = useState(0);
-  const [openResults, setOpenResults] = useState(0);
   const searchSubmit = (e: any) => {
     e.preventDefault();
     navigate({
@@ -48,19 +49,19 @@ export default function Header() {
     }
   };
   inputRef.current?.addEventListener("focusin", function () {
-    setOpenResults(1);
+    props.setOpenResults(1);
   });
   // inputRef.current?.addEventListener("focusout", function () {
   //   setOpenResults(0);
   // });
   document.body.addEventListener("click", function (e: any) {
     if (
-      openResults == 1 &&
+      props.openResults == 1 &&
       e.target?.classList.value !== "search-results" &&
       e.target?.classList.value !== "quick-search-input" &&
       e.target?.classList.value !== "result-movies"
     ) {
-      setOpenResults(0);
+      props.setOpenResults(0);
     }
   });
   return (
@@ -78,7 +79,11 @@ export default function Header() {
             <img src={searchIcon} onClick={(e) => searchSubmit(e)} />
           </form>
         </div>
-        <div className={`search-results ${openResults ? "" : "searchCloser"}`}>
+        <div
+          className={`search-results ${
+            props.openResults ? "" : "searchCloser"
+          }`}
+        >
           <div className="result-movies">
             {searchedAPI.current !== null
               ? searchedAPI.current.map((e: any, i: number) => (

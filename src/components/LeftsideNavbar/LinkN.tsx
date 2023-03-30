@@ -8,7 +8,7 @@ interface LinkINT {
   navigateTo: string;
   isActive: boolean;
 }
-export default function Link({
+export default function LinkN({
   title,
   icon,
   setActive,

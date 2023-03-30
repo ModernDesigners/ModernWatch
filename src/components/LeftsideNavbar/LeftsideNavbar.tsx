@@ -1,16 +1,22 @@
 import "./LeftsideNavbar.css";
 import Logo from "../../images/Logo.png";
-import Link from "./Link";
 import { NavlinksAPI } from "../../API/NavlinksAPI";
 import { useState } from "react";
 import play from "../../images/icons/Play.png";
 import rank from "../../images/icons/rank.png";
 import heart from "../../images/icons/heart.png";
 import { useLocation, useNavigate } from "react-router";
+import LinkN from "./LinkN";
+import { Link } from "react-router-dom";
+import searchIcon from "../../images/icons/searchIcon.png";
+import { MdClose } from "react-icons/md";
+// import { hideQuick } from "../Header/Header";
 
 export default function LeftsideNavbar(props: {
   navToggle: boolean;
   setNavToggle: any;
+  setOpenResults: any;
+  openResults: number;
 }) {
   const location = useLocation();
   const navigate = useNavigate();
@@ -21,6 +27,9 @@ export default function LeftsideNavbar(props: {
     } else {
       return location.pathname.substring(1) == navigateTo ? true : false;
     }
+  }
+  function hideQuick() {
+    props.setOpenResults(0);
   }
   return (
     <>
@@ -33,6 +42,9 @@ export default function LeftsideNavbar(props: {
         <span></span>
         <span></span>
         <span></span>
+      </div>
+      <div className={`closeSearchNav ${props.openResults ? "" : "notG"}`}>
+        <MdClose className="closeI" onClick={hideQuick} />
       </div>
       <div
         className={`leftside-navbar ${
@@ -47,7 +59,7 @@ export default function LeftsideNavbar(props: {
         </div>
         <div className="navbar-links">
           {NavlinksAPI.map((e, i) => (
-            <Link
+            <LinkN
               index={i}
               navigateTo={e.navigateTo}
               isActive={getActivated(e.navigateTo)}
@@ -66,9 +78,11 @@ export default function LeftsideNavbar(props: {
           <div>
             <img src={rank} alt="" />
           </div>
-          <div>
-            <img src={heart} alt="" />
-          </div>
+          <Link to="Favorites">
+            <div>
+              <img src={heart} alt="" />
+            </div>
+          </Link>
         </div>
       </div>
     </>

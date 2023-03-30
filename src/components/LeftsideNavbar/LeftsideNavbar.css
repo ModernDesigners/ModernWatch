@@ -94,16 +94,32 @@
   background: rgba(42, 47, 94, 0.662745098);
 }
 
+.closeSearchNav {
+  display: none;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 60px;
+  top: 5px;
+  border-radius: 5px;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.closeSearchNav .closeI {
+  font-size: 36px;
+  color: #252b6a;
+}
+
 .burgerbarNav {
   display: none;
   height: 50px;
-  width: 60px;
+  width: 50px;
   position: fixed;
-  right: 0px;
-  padding-right: 10px;
-  top: 20px;
+  right: 10px;
+  top: 5px;
   border-radius: 5px;
-  background: #0c0e25;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -130,10 +146,16 @@
 }
 
 @media (max-width: 590px) {
+  .closeSearchNav {
+    display: flex;
+  }
   .burgerbarNav {
     display: flex;
   }
   .App .leftside-navbar-active {
     left: 0;
   }
-}/*# sourceMappingURL=LeftsideNavbar.css.map */
+}
+.notG {
+  display: none;
+}

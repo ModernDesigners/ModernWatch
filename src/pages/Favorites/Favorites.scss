@@ -1,0 +1,15 @@
+.Favorites {
+    padding: 30px 0;
+    .favoritesRow {
+        display: flex;
+        gap: 30px;
+    }
+    .emptyFavs {
+        color: #ffffffbc;
+        margin-bottom: 30px;
+        font-family: main_geo;
+        font-size: 22px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+}

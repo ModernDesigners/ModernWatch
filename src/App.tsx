@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import LeftsideNavbar from "./components/LeftsideNavbar/LeftsideNavbar";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
+import Favorites from "./pages/Favorites/Favorites";
 import GenreResults from "./pages/Genres/GenreResult/GenreResults";
 import Genres from "./pages/Genres/Genres";
 import Home from "./pages/Home/Home";
@@ -15,9 +16,11 @@ import Trailers from "./pages/Trailers/Trailers";
 function App() {
   const [favorites, setFavorites] = useState<Array<number>>([]);
   const [navToggle, setNavToggle] = useState(false);
+  const [openResults, setOpenResults] = useState(0);
 
   let location = useLocation();
   const [padding, setPadding] = useState(0);
+
   useEffect(() => {
     if (location.pathname.includes("Movie")) {
       setPadding(1);
@@ -26,11 +29,15 @@ function App() {
     }
     setNavToggle(false);
   }, [location.pathname]);
-
   return (
-    <div className={`${padding ? "navPad" : undefined} App`}>
-      <LeftsideNavbar navToggle={navToggle} setNavToggle={setNavToggle} />
-      <Header />
+    <div className={`${padding ? "navPad" : ""} App`}>
+      <LeftsideNavbar
+        navToggle={navToggle}
+        setNavToggle={setNavToggle}
+        openResults={openResults}
+        setOpenResults={setOpenResults}
+      />
+      <Header openResults={openResults} setOpenResults={setOpenResults} />
 
       <Routes>
         <Route path="/">
@@ -45,6 +52,12 @@ function App() {
             path="Movie/:id"
             element={
               <Movie favorites={favorites} setFavorites={setFavorites} />
+            }
+          />
+          <Route
+            path="Favorites"
+            element={
+              <Favorites favorites={favorites} setFavorites={setFavorites} />
             }
           />
         </Route>
