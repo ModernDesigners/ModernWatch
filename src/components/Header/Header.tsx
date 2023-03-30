@@ -81,7 +81,9 @@ export default function Header(props: {
         </div>
         <div
           className={`search-results ${
-            props.openResults ? "" : "searchCloser"
+            props.openResults && inputRef.current.value.length
+              ? ""
+              : "searchCloser"
           }`}
         >
           <div className="result-movies">

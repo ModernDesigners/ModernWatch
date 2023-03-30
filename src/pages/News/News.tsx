@@ -25,7 +25,7 @@ export default function () {
       </div>
       <div className="news-movie-main">
         {NewsAPI.map((e, i) => (
-          <NewsMovie key={i} image={e.image} />
+          <NewsMovie navigateTo={e.navigateTo} key={i} image={e.image} />
         ))}
       </div>
     </div>

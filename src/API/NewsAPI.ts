@@ -5,14 +5,18 @@ import moonknight from "../images/news/moonknight.png";
 export const NewsAPI = [
   {
     image: flash,
+    navigateTo: "/Movie/",
   },
   {
     image: loki,
+    navigateTo: "/Movie/5",
   },
   {
     image: wednesday,
+    navigateTo: "/Movie/8",
   },
   {
     image: moonknight,
+    navigateTo: "/Movie/11",
   },
 ];
