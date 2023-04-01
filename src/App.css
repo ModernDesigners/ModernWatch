@@ -87,12 +87,12 @@ h5 {
   letter-spacing: 2px;
 }
 
-.nBlur {
+.nBlurr {
   position: fixed;
   width: 100%;
   z-index: 1;
 }
-.nBlur::before {
+.nBlurr::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -136,7 +136,7 @@ h5 {
   .App {
     padding: 50px 10px;
   }
-  .nBlur {
+  .nBlurr {
     display: none;
   }
 }

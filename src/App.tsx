@@ -31,7 +31,7 @@ function App() {
   }, [location.pathname]);
   return (
     <>
-      <div className="nBlur"></div>
+      <div className="nBlurr"></div>
       <div className={`${padding ? "navPad" : ""} App`}>
         <LeftsideNavbar
           navToggle={navToggle}
