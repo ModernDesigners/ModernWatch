@@ -78,6 +78,19 @@ h5 {
   font-size: 22px;
   letter-spacing: 2px;
 }
+.nBlur {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, #050613, rgba(0, 0, 0, 0));
+  }
+}
 @keyframes Loader {
   0% {
     filter: brightness(0.9);
@@ -111,5 +124,8 @@ h5 {
 @media screen and (max-width: 590px) {
   .App {
     padding: 50px 10px;
+  }
+  .nBlur {
+    display: none;
   }
 }

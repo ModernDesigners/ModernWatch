@@ -156,3 +156,12 @@
 .Header .headerButtons .headerMicroButtons:hover {
   background: #111433;
 }
+
+.noResultQ {
+  text-align: center;
+  font-family: main_geo;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 16px;
+  margin-top: 20px;
+}

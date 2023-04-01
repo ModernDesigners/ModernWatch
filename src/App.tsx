@@ -30,39 +30,42 @@ function App() {
     setNavToggle(false);
   }, [location.pathname]);
   return (
-    <div className={`${padding ? "navPad" : ""} App`}>
-      <LeftsideNavbar
-        navToggle={navToggle}
-        setNavToggle={setNavToggle}
-        openResults={openResults}
-        setOpenResults={setOpenResults}
-      />
-      <Header openResults={openResults} setOpenResults={setOpenResults} />
+    <>
+      <div className="nBlur"></div>
+      <div className={`${padding ? "navPad" : ""} App`}>
+        <LeftsideNavbar
+          navToggle={navToggle}
+          setNavToggle={setNavToggle}
+          openResults={openResults}
+          setOpenResults={setOpenResults}
+        />
+        <Header openResults={openResults} setOpenResults={setOpenResults} />
 
-      <Routes>
-        <Route path="/">
-          <Route index element={<Home />} />
-          <Route path="Genres" element={<Genres />} />
-          <Route path="Genres/:genre" element={<GenreResults />} />
-          <Route path="News" element={<News />} />
-          <Route path="Trailers" element={<Trailers />} />
-          <Route path="Search" element={<Search />} />
-          <Route path="ComingSoon" element={<ComingSoon />} />
-          <Route
-            path="Movie/:id"
-            element={
-              <Movie favorites={favorites} setFavorites={setFavorites} />
-            }
-          />
-          <Route
-            path="Favorites"
-            element={
-              <Favorites favorites={favorites} setFavorites={setFavorites} />
-            }
-          />
-        </Route>
-      </Routes>
-    </div>
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="Genres" element={<Genres />} />
+            <Route path="Genres/:genre" element={<GenreResults />} />
+            <Route path="News" element={<News />} />
+            <Route path="Trailers" element={<Trailers />} />
+            <Route path="Search" element={<Search />} />
+            <Route path="ComingSoon" element={<ComingSoon />} />
+            <Route
+              path="Movie/:id"
+              element={
+                <Movie favorites={favorites} setFavorites={setFavorites} />
+              }
+            />
+            <Route
+              path="Favorites"
+              element={
+                <Favorites favorites={favorites} setFavorites={setFavorites} />
+              }
+            />
+          </Route>
+        </Routes>
+      </div>
+    </>
   );
 }
 

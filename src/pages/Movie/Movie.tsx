@@ -6,13 +6,16 @@ import logo from "../../images/LogoH.webp";
 import "./MovieQuery/MovieQuery.css";
 import { useParams } from "react-router";
 import { MoviesAPI } from "../../API/MoviesAPI";
-
+import { Player } from "video-react";
+import { useRef } from "react";
 export default function Movie(props: {
   setFavorites: any;
   favorites: Array<number>;
 }) {
   let linkInfo: any = useParams();
   let linkId = parseInt(linkInfo.id);
+  let movieThumbnail: any = useRef(null);
+  let playerVideo: any = useRef(null);
   const movieGet: any = MoviesAPI.filter((e) => e.id == linkId);
   const movieInfo = movieGet[0];
 
@@ -21,7 +24,10 @@ export default function Movie(props: {
     const loader = cardId.children[0];
     loader.style.display = "none";
   }
-
+  const movieStart = () => {
+    movieThumbnail.current.remove();
+    playerVideo.current.play();
+  };
   return (
     <div className="movie">
       <div className="movie-image">
@@ -37,9 +43,21 @@ export default function Movie(props: {
           />
         </div>
         <div className="movie-play">
-          <img className="movie-image" src={movieInfo.image} alt="" />
-          <div className="play-button">
-            <img src={play} alt="" />
+          <Player
+            playsInline
+            ref={playerVideo}
+            poster="/assets/poster.png"
+            src={movieInfo.link}
+          />
+          <div
+            onClick={movieStart}
+            ref={movieThumbnail}
+            className="movie-image"
+          >
+            <img src={movieInfo.image} />
+            <div className="play-button">
+              <img src={play} />
+            </div>
           </div>
         </div>
         <div className="movie-additions">

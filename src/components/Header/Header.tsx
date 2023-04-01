@@ -16,7 +16,7 @@ export default function Header(props: {
 }) {
   const location = useLocation();
   const [searchINP, setSearchINP] = useState(1);
-  const searchedAPI: any = useRef(null);
+  const searchedAPI: any = useRef([]);
 
   useEffect(() => {
     if (location.pathname == "/Search") {
@@ -40,20 +40,20 @@ export default function Header(props: {
   };
   const QuickSearch = () => {
     setNavSearch(inputRef.current.value);
-    if (inputRef.current.value.length == 0) {
-      searchedAPI.current = null;
+
+    if (inputRef.current.value.length === 0) {
+      searchedAPI.current = [];
     } else {
       searchedAPI.current = MoviesAPI.filter((items) =>
         items.name.toLowerCase().includes(inputRef.current.value.toLowerCase())
       );
+
+      props.setOpenResults(1);
     }
   };
   inputRef.current?.addEventListener("focusin", function () {
-    props.setOpenResults(1);
+    QuickSearch();
   });
-  // inputRef.current?.addEventListener("focusout", function () {
-  //   setOpenResults(0);
-  // });
   document.body.addEventListener("click", function (e: any) {
     if (
       props.openResults == 1 &&
@@ -64,6 +64,9 @@ export default function Header(props: {
       props.setOpenResults(0);
     }
   });
+  const clearInp = () => {
+    inputRef.current.value = "";
+  };
   return (
     <div className="Header">
       <div className="search-main">
@@ -87,21 +90,24 @@ export default function Header(props: {
           }`}
         >
           <div className="result-movies">
-            {searchedAPI.current !== null
-              ? searchedAPI.current.map((e: any, i: number) => (
-                  <ResultMovie
-                    key={i}
-                    id={e.id}
-                    imagePoster={e.imagePoster}
-                    name={e.name}
-                    genres={e.genres}
-                    studio={e.studio}
-                    year={e.year}
-                    time={e.time}
-                    country={e.country}
-                  />
-                ))
-              : null}
+            {searchedAPI.current.length !== 0 ? (
+              searchedAPI.current.map((e: any, i: number) => (
+                <ResultMovie
+                  click={clearInp}
+                  key={i}
+                  id={e.id}
+                  imagePoster={e.imagePoster}
+                  name={e.name}
+                  genres={e.genres}
+                  studio={e.studio}
+                  year={e.year}
+                  time={e.time}
+                  country={e.country}
+                />
+              ))
+            ) : (
+              <p className="noResultQ">მონაცემი ვერ მოიძებნა</p>
+            )}
           </div>
         </div>
       </div>

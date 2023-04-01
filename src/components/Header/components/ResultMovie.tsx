@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function ResultMovie(props: any) {
   return (
-    <Link className="resultedA" to={"/Movie/" + props.id}>
+    <Link onClick={props.click} className="resultedA" to={"/Movie/" + props.id}>
       <div className="result-movie">
         <img src={props.imagePoster} />
         <div className="result-movie-info">

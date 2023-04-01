@@ -4,8 +4,8 @@ import { FilterAPI } from "../../API/FIlterAPI";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { MoviesAPI } from "../../API/MoviesAPI";
 import Card from "../../components/Card/Card";
-import { useEffect, useRef, useState } from "react";
-import { useLocation, useParams } from "react-router";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 import { MdClose } from "react-icons/md";
 export default function Search() {
   const seeGets = useLocation();
@@ -15,7 +15,6 @@ export default function Search() {
       ? searchParams.get("search")
       : undefined;
   const [searchInput, setSearchInput] = useState(getSearchT);
-  const [searchedRow, setsearchedRow] = useState(0);
   const [showFilters, setShowFilters] = useState(false);
   useEffect(() => {
     setSearchInput(getSearchT);

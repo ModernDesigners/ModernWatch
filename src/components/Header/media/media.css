@@ -16,8 +16,8 @@
     top: 0px;
     height: 100px;
   }
-  .Header .search-main .quick-search-input {
-    width: 300px !important;
+  .Header .search-main .headerSearch input {
+    width: 300px;
   }
 }
 @media screen and (max-width: 590px) {
@@ -33,6 +33,17 @@
     position: unset;
   }
   .Header .search-main .search-results {
+    width: 100%;
+  }
+}
+@media (max-width: 365px) {
+  .Header {
+    width: 100%;
+  }
+  .Header .search-main {
+    width: calc(100% - 55px);
+  }
+  .Header .search-main .headerSearch input {
     width: 100%;
   }
 }

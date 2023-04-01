@@ -104,11 +104,7 @@
       }
     }
     .blur {
-      background: linear-gradient(
-        to top,
-        rgba(12, 14, 37, 0.95),
-        rgba(12, 14, 37, 0)
-      );
+      background: linear-gradient(to top, rgba(12, 14, 37, 0.95), rgba(12, 14, 37, 0));
       position: absolute;
       left: 0px;
       top: 0px;
@@ -163,11 +159,7 @@
         }
       }
       .blur {
-        background: linear-gradient(
-          to top,
-          rgba(12, 14, 37, 0.95),
-          rgba(12, 14, 37, 0)
-        );
+        background: linear-gradient(to top, rgba(12, 14, 37, 0.95), rgba(12, 14, 37, 0));
         position: absolute;
         left: 0px;
         top: 0px;
@@ -209,14 +201,59 @@
     }
 
     .MiniSec {
-      height: 600px;
       width: 100%;
       display: flex;
       flex-direction: unset;
+      height: auto;
 
       .MiniCard {
         width: 50%;
+        img {
+          position: relative;
+        }
       }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .MainSplitter {
+    .MainSec {
+      height: auto;
+      img {
+        position: relative;
+      }
+    }
+  }
+}
+.MainSplitter {
+  .MiniSec {
+    .MiniCard {
+      .MiniCardTitle {
+        font-size: 13px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .MainSplitter {
+    .MainSec {
+      .MainBar {
+        bottom: 8px;
+        .tSide {
+          font-size: 13px;
+        }
+        .bSide {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 485px) {
+  .MainSplitter .MiniSec {
+    flex-direction: column;
+    .MiniCard {
+      width: 100%;
     }
   }
 }

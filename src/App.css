@@ -15,10 +15,6 @@
   margin: 0px;
   box-sizing: border-box;
 }
-*::-moz-selection {
-  background: #00c19e;
-  color: white;
-}
 *::selection {
   background: #00c19e;
   color: white;
@@ -91,6 +87,20 @@ h5 {
   letter-spacing: 2px;
 }
 
+.nBlur {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.nBlur::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, #050613, rgba(0, 0, 0, 0));
+}
+
 @keyframes Loader {
   0% {
     filter: brightness(0.9);
@@ -126,4 +136,7 @@ h5 {
   .App {
     padding: 50px 10px;
   }
-}/*# sourceMappingURL=App.css.map */
+  .nBlur {
+    display: none;
+  }
+}

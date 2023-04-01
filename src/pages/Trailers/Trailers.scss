@@ -16,11 +16,7 @@
       overflow: hidden;
       cursor: pointer;
       .blur {
-        background: linear-gradient(
-          180deg,
-          rgba(12, 14, 37, 0) 0%,
-          #0c0e25 100%
-        );
+        background: linear-gradient(180deg, rgba(12, 14, 37, 0) 0%, #0c0e25 100%);
         position: absolute;
         left: 0px;
         top: 0px;
@@ -32,6 +28,9 @@
         position: absolute;
         bottom: 15px;
         left: 15px;
+        font-family: main_geo;
+        letter-spacing: 2px;
+        font-size: 15px;
       }
       &:hover {
         .blur {

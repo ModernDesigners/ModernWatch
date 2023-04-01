@@ -1,3 +1,8 @@
+@import "~video-react/styles/scss/video-react";
+.video-react {
+  height: 100% !important;
+  padding: 0 !important;
+}
 .movie {
   .movie-image {
     width: 100%;
@@ -48,20 +53,28 @@
         height: 100%;
         filter: brightness(100%);
         position: absolute;
-      }
-      .play-button {
-        z-index: 2;
-        width: 50px;
-        height: 50px;
-        background: #00ffd1;
-        border-radius: 50%;
         display: flex;
+        cursor: pointer;
         justify-content: center;
         align-items: center;
-        cursor: pointer;
-
         img {
-          margin-left: 4px;
+          height: 100%;
+          width: 100%;
+        }
+        .play-button {
+          z-index: 2;
+          width: 50px;
+          position: absolute;
+          height: 50px;
+          background: #00ffd1;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 12px;
+          img {
+            margin-left: 4px;
+          }
         }
       }
     }
