@@ -4,20 +4,24 @@ import MovieInfo from "./MovieInfo/MovieInfo";
 import MoreMovie from "./MoreMovie/MoreMovie";
 import logo from "../../images/LogoH.webp";
 import "./MovieQuery/MovieQuery.css";
-import { useParams } from "react-router";
+import { useLocation, useParams } from "react-router";
 import { MoviesAPI } from "../../API/MoviesAPI";
 import { Player } from "video-react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 export default function Movie(props: {
   setFavorites: any;
   favorites: Array<number>;
 }) {
+  let location = useLocation();
   let linkInfo: any = useParams();
   let linkId = parseInt(linkInfo.id);
   let movieThumbnail: any = useRef(null);
   let playerVideo: any = useRef(null);
   const movieGet: any = MoviesAPI.filter((e) => e.id == linkId);
   const movieInfo = movieGet[0];
+  useEffect(() => {
+    movieThumbnail.current.style.display = "flex";
+  }, [location.pathname]);
 
   function hideLoader(img: any) {
     const cardId = img.parentNode;
@@ -25,7 +29,7 @@ export default function Movie(props: {
     loader.style.display = "none";
   }
   const movieStart = () => {
-    movieThumbnail.current.remove();
+    movieThumbnail.current.style.display = "none";
     playerVideo.current.play();
   };
   return (
